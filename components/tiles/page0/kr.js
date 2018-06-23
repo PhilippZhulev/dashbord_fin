@@ -146,7 +146,7 @@ function Kr_tile () {
 '                                            <div class="row">' +
 '                                                <div class="col-12">' +
 '                                                    <span class="tiles__wrapper__tile_title">'+screen_data[0].tile+'<span>млрд. руб</span></span>' +
-'                                                    <button type="button" class="btn btn-outline-info btn-abc btn-sm  btn_i_super_mego_dzo">ДЗО</button>' +
+'                                                    <button type="button" class="btn btn-outline-info btn-abc btn-sm btn_i_super_mego_dzo">ДЗО</button>' +
 '                                                </div>' +
 '                                            </div>' +
 '                                        </div>' +
