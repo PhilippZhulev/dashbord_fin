@@ -1,0 +1,110 @@
+.modal_window {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    background: rgba(0, 0, 0, 0.46);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 500ms linear;
+}
+.modal_window.active {
+    visibility: visible;
+    opacity: 1;
+}
+.modal_inner {
+    background: #393f48;
+    width: 100%;
+    height: 400px;
+    max-width: 700px;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 10%;
+    box-shadow: 2px 9px 20px rgba(0, 0, 0, 0.29);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms linear;
+    transform: translateY(-100px);
+}
+.modal_window.active .modal_inner{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.modal_header {
+    height: 30px;
+    width: 100%;
+    display: table;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.modal_header {
+    height: 30px;
+    width: 100%;
+    display: table;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 15px;
+}
+span.modal_close {
+    display: block;
+    width: 25px;
+    height: 25px;
+    float: right;
+    background: url("close.svg") center no-repeat;
+    background-size: 70%;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.modal_body {
+    height: calc(100% - 30px);
+    width: 100%;
+    position: absolute;
+}
+div#cir {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+}
+.modal_block {
+    display: none;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    height: calc(100% - 23px);
+    overflow: auto;
+}
+.modal_block.active {
+    display: block;
+}
+.modal_block_big {
+    display: none;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+}
+.modal_block_big.active {
+    display: block;
+}
+.modal_title{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+.timer {
+    opacity: 0;
+}
+.timer.active {
+    color: red;
+    opacity: 1;
+}
+.char-block {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#opex_m {
+    background: url("opex_m.jpg") center no-repeat;
+    background-size: 53%;
+}

@@ -1,0 +1,152 @@
+header.header {
+  width: 100%;
+  height: 64px;
+}
+div.filters_block,
+div.filters_title {
+  display: flex;
+  height: 64px;
+}
+div.filters_block__item {
+  display: table;
+  height: 64px;
+  margin-right: 25px;
+}
+div.filters_block__input,
+span.filters_block__title {
+  display: table-cell;
+  vertical-align: middle;
+  height: auto;
+  position: relative;
+}
+span.bank_group {
+    position: absolute;
+    right: 50px;
+}
+div.custom_select {
+  height: 26px;
+    border: 1px solid #6d7b87;
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  border-radius: 4px;
+  width: 165px;
+  padding: 1px 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 15px;
+  z-index: 999;
+  background: #1f262c;
+}
+div.custom_select.period {
+  width: 90px;
+  float: left;
+}
+b.pages_title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 44px;
+}
+.custom_select__dropdown span:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.custom_select__dropdown span {
+  display: block;
+  padding: 2px 5px;
+}
+.custom_select__dropdown span:hover {
+  background: rgba(255,255,255,0.42);
+  color: #1f262c;
+}
+.custom_select__dropdown span.active {
+  background: rgba(255,255,255,0.55);
+  color: #1f262c;
+}
+.custom_select__dropdown {
+  background: #586a88;
+  width: 100%;
+  margin-left: -6px;
+  margin-top: 1px;
+  color: #fff;
+  overflow: hidden;
+  position: absolute;
+  z-index: 998;
+  padding: 5px 0;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.51);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 300ms ease-in-out;
+}
+.custom_select__dropdown.active {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+  z-index: 999;
+}
+.tiles__wrapper__tile  {
+  overflow: hidden;
+}
+.back_btn {
+    height: 100%;
+    width: 50px;
+    padding: 11px 2px;
+    display: none;
+}
+.back_btn path {
+    transition: all 200ms ease-in-out;
+}
+.back_btn.active {
+    display: block;
+}
+.home_btn {
+    width: 51px;
+    height: 100%;
+    padding: 10px 2px;
+    display: none;
+}
+.home_btn.active {
+    display: block;
+}
+.home_btn path {
+    transition: all 200ms ease-in-out;
+}
+.header_top_line {
+    height: 44px;
+    background: #38404d;
+}
+.navigation_block {
+    height: 44px;
+    position: absolute;
+    padding-left: 15px;
+    display: flex;
+}
+span.bank_group {
+    position: absolute;
+    right: 50px;
+    height: 26px;
+    border: 1px solid #6d7b87;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 86px;
+    top: 63px;
+    padding: 1px 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 15px;
+    z-index: 999;
+    text-align: center;
+    background: #1f262c;
+}
+.tiles__wrapper__tile.i_err_404 span {
+    color: #a0aab7;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    line-height: 160px;
+}

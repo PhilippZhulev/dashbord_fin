@@ -1,0 +1,10 @@
+{
+  "context": "sdk",
+  "bo": true,
+  "paths": {
+    "iScroll": "$$path$$js/iscroll",
+    "init": "$$path$$js/init"
+  },
+  "shim": {
+  }
+}
