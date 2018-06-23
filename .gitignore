@@ -1,4 +1,3 @@
-*.csv
 *.swp
 *~
 *.iws
@@ -8,4 +7,4 @@
 .sass-cache
 .idea
 node_modules/
-bower_components/ 
+bower_components/
