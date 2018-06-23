@@ -4,118 +4,124 @@ function Prb_tile () {
         this.refresh();
 
         var globalSettings = this.globalSettings;
-            console.warn("222222222222222")
+            console.warn("prb")
 
             //var expData=JSON.parse("["+this.globalSettings.Settings.expData+"]");
 
         globals.prbTableElms = [
             {
                 parent: "Бизнес функция",
-                fact: "74,5",
-                plan: "3,8%",
-                fact_proc: "5,0%",
+                fact: "74.5",
+                plan: "-5.1%",
+                fact_proc: "5.4%",
                 children: [
                     {
                         name: "CIB",
-                        fact: "2,2",
-                        plan: "0,1%",
-                        fact_proc: "4,0%"
+                        fact: "2.2",
+                        plan: "-10.7%",
+                        fact_proc: "4.2%"
                     },
                     {
                         name: "КБ",
-                        fact: "11,1",
-                        plan: "1,1%",
-                        fact_proc: "12,0%"
+                        fact: "11.1",
+                        plan: "-4.1%",
+                        fact_proc: "11.5%"
                     },
                     {
                         name: "РБ",
-                        fact: "50,5",
-                        plan: "2,1%",
-                        fact_proc: "4,0%"
+                        fact: "50.5",
+                        plan: "-4.4%",
+                        fact_proc: "4.2%"
                     },
 					{
                         name: "SBI",
-                        fact: "0,2",
-                        plan: "0,0%",
-                        fact_proc: "18,0%"
+                        fact: "0.2",
+                        plan: "-38.8%",
+                        fact_proc: "18.4%"
                     }
 					,
 					{
                         name: "Цифровой бизнес",
-                        fact: "0,1",
-                        plan: "0,0%",
-                        fact_proc: "29,0%"
+                        fact: "0.1",
+                        plan: "-12.0%",
+                        fact_proc: "28.6%"
                     },
 					{
                         name: "ДРПА",
-                        fact: "2,5",
-                        plan: "-0,1%",
-                        fact_proc: "-4,0%"
+                        fact: "2.5",
+                        plan: "-9.3%",
+                        fact_proc: "-3.5%"
                     },
 					{
                         name: "ЦУНДО",
-                        fact: "12,9",
-                        plan: "-0,3%",
-                        fact_proc: "-2,0%"
+                        fact: "12.9",
+                        plan: "-2.2%",
+                        fact_proc: "-2.2%"
                     },
 					{
                         name: "Недвижимость",
-                        fact: "15",
-                        plan: "0,5%",
-                        fact_proc: "4,0%"
+                        fact: "15.0",
+                        plan: "-2.0%",
+                        fact_proc: "3.6%"
                     },
 					{
                         name: "УБ",
-                        fact: "0,6",
-                        plan: "0,0%",
-                        fact_proc: "-4,0%"
+                        fact: "0.6",
+                        plan: "-4.3%",
+                        fact_proc: "-3.8%"
+                    },
+                    {
+                        name: "Внут. плата",
+                        fact: "-20.7",
+                        plan: "-0.3%",
+                        fact_proc: "-1.9%"
                     }
                 ]
             },
             {
                 parent: "Обеспечивающая функция",
-                fact: "32,3",
-                plan: "1,4%",
-                fact_proc: "5,0%",
+                fact: "32.3",
+                plan: "-12.6%",
+                fact_proc: "4.5%",
                 children: [
                     {
                         name: "Блок Т",
-                        fact: "19,6",
-                        plan: "0,7%",
-                        fact_proc: "4,0%"
+                        fact: "19.6",
+                        plan: "-10.2%",
+                        fact_proc: "4.5%"
                     },
                     {
                         name: "Блок С",
-                        fact: "7,7",
-                        plan: "-20,0%",
-                        fact_proc: "-2,0%"
+                        fact: "7.7",
+                        plan: "-16.8%",
+                        fact_proc: "-2.5%"
                     },
                     {
                         name: "Блок Риски",
-                        fact: "2,8%",
-                        plan: "0,4%",
-                        fact_proc: "17,0%"
+                        fact: "2.8",
+                        plan: "0.6%",
+                        fact_proc: "16.8%"
                     },
 					{
                         name: "Блок HR",
-                        fact: "2,1",
-                        plan: "0,5%",
-                        fact_proc: "31,0%"
+                        fact: "2.1",
+                        plan: "-28.6%",
+                        fact_proc: "3.8%"
                     }
                 ]
             },
 			{
                 parent: "Корпоративный центр",
-                fact: "14,3",
-                plan: "2,4%",
-                fact_proc: "20,0%",
+                fact: "14.3",
+                plan: "16.8%",
+                fact_proc: "19.9%",
 				children: null
 			},
 			{
                 parent: "Дочернии компании",
-                fact: "31,9",
-                plan: "-10,0%",
-                fact_proc: "0,0%",
+                fact: "31.9",
+                plan: "-13.0%",
+                fact_proc: "-0.4%",
 				children: null
 			}
         ];
@@ -192,7 +198,7 @@ function Prb_tile () {
 '                                        <div class="row">' +
 '                                            <div class="col-12">' +
 '                                                <span class="tiles__wrapper__tile_title">Прямые расходы блоков<span>млрд. руб</span></span>' +
-'                                                <button type="button" class="btn btn-outline-info btn-abc btn-sm">ABC -> %</button>' +
+//'                                                <button type="button" class="btn btn-outline-info btn-abc btn-sm">ABC -> %</button>' +
 '                                            </div>' +
 '                                        </div>' +
 '                                    </div>' +
@@ -223,10 +229,10 @@ function Prb_tile () {
 '                                                    <span class="collapse__table__title">153</span>' +
 '                                                </div>' +
 '                                                <div class="col-2">' +
-'                                                    <span class="collapse__table__title">7,5</span>' +
+'                                                    <span class="collapse__table__title">-6.9%</span>' +
 '                                                </div>' +
 '                                                <div class="col-2">' +
-'                                                    <span class="collapse__table__title">5,0%</span>' +
+'                                                    <span class="collapse__table__title">5.2%</span>' +
 '                                                </div>' +
 '                                            </div>' +
 '                                        </div>' +

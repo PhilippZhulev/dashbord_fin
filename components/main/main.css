@@ -1015,8 +1015,25 @@ span.legend_item {
     float: left;
     padding: 5px 0;
 }
+.btn-outline-info.btn_schch:not(:disabled):not(.disabled):hover,
+.btn-outline-info.btn_schch:not(:disabled):not(.disabled):active,
 .btn-outline-info.btn_schch:not(:disabled):not(.disabled).active {
-    border-color: #6c7582;
-    color: #6c7582;
-    background-color: transparent;
+    border-color: #6c7582!important;
+    color: #6c7582!important;
+    background-color: transparent!important;
+}
+.btn_schch:before {
+    color: #fff;
+    border-color: #4e5b65!important;
+    background-color: #4e5b65!important;
+}
+.btn_schch.active:after {
+    color: #fff;
+    border-color: #4e5b65!important;
+    background-color: #4e5b65!important;
+}
+.btn_schch.active:before {
+    border-color: #6c7582!important;
+    color: #6c7582!important;
+    background-color: transparent!important;
 }
