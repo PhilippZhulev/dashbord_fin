@@ -74,17 +74,17 @@ function Schch_tile () {
                 '                                            <span class="legend__item"><i style="background: #6EC7F7"></i>Факт</span>' +
                 '                                            <span class="legend__item"><i style="background: #A0AAB7"></i>План</span>' +
                 '                                        </div>' +
-                '                   <button type="button" class="btn btn-outline-info btn-abc btn-sm btn_schch">ФБ / Подразделения</button>' +
+                '                   <button type="button" class="btn btn-outline-info btn-abc btn-sm btn_schch"></button>' +
                 '              </div>' +
                 '          </div>' +
                 '      </div>' +
 
                 // '	   <div id="schch_g_1"></div>' +
                 '      <div class="chart_element__container schch" id="schch">' +
-                '           <div class="chart_element__chart schch_lay_1 active">' +
+                '           <div class="chart_element__chart schch_lay_1 active" id="scroll_schch_1">' +
                 '                   <div class="chart_do" id="schch_g_2" style="height:'+(data.length*50)+'px;"></div>' +
                 '           </div>' +
-                '           <div class="chart_element__chart schch_lay_2">' +
+                '           <div class="chart_element__chart schch_lay_2" id="scroll_schch_2">' +
                 '                   <div class="chart_do" id="schch_lay_2" style="height:'+(data1.length*50)+'px;padding-left: 19px;"></div>' +
                 '           </div>' +
                 '      </div>' +
@@ -101,12 +101,16 @@ function Schch_tile () {
                 // '      </div>' +
                 '   </div>'
             });
-            new iScroll('schch',{
-                snap: true,
-                momentum: false,
-                hScrollbar: false,
-                vScrollbar: false
-            });
+
+            var sc = ['scroll_schch_1','scroll_schch_2'];
+            for(var j = 0; j < sc.length;j++) {
+                new iScroll(sc[j], {
+                    snap: true,
+                    momentum: false,
+                    hScrollbar: false,
+                    vScrollbar: false
+                });
+            }
 
             globals.chartSlideController({
                 btnClass: "btn_schch",
