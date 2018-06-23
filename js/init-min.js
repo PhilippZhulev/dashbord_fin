@@ -290,8 +290,8 @@ globals.chartSlideController = function(options) {
     var blocks = document.querySelectorAll(options.blockClass);
 
     globals.tap(btn, function() {
+        console.log(12323);
         for(var i = 0; i < blocks.length; i++) {
-
             if(blocks[i].classList.length > 2) {
                 blocks[i].classList.remove("active");
                 btn.classList.remove("active");
