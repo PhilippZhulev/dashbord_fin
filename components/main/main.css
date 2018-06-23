@@ -580,11 +580,11 @@ button.btn.btn-outline-info.btn-sm.click_btn_sopf {
 }
 
 .tiles__wrapper.p_allokaciya .item_1 {
-    width: 25%;
+    width: 50%;
     height: 100%;
 }
 .tiles__wrapper.p_allokaciya .item_2 {
-    width: 75%;
+    width: 50%;
     height: 100%;
 }
 .tiles__wrapper.p_chis .column_1,
@@ -993,17 +993,30 @@ span.legend_item {
 .btn_schch {
     width: 138px;
     height: 28px;
+    padding: 0;
     text-align: left;
 }
 .btn_schch:before {
     content: 'ФБ';
     height: 28px;
+    display: block;
+    float: left;
+    width: 34px;
+    text-align: center;
     border-right: 1px solid #6c7582;
-    padding: 5px 10px;
+    padding: 5px 0;
 }
 .btn_schch:after {
     content: 'Подразделения';
     height: 28px;
-    border-right: 1px solid #6c7582;
-    padding: 5px 10px;
+    width: calc(100% - 34px);
+    text-align: center;
+    display: block;
+    float: left;
+    padding: 5px 0;
+}
+.btn-outline-info.btn_schch:not(:disabled):not(.disabled).active {
+    border-color: #6c7582;
+    color: #6c7582;
+    background-color: transparent;
 }
