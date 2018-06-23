@@ -541,6 +541,7 @@ function Modal () {
             '<div class="modal_inner">'+
                 '<div class="modal_header">'+
                     '<span class="modal_title"></span>' +
+                    '<span class="scroll_ico"></span>' +
                     '<span class="modal_close"></span>' +
                 '</div>'+
                 '<div class="modal_body">'+
@@ -593,7 +594,7 @@ function Modal () {
 //                    '                                    </div>' +
                     '                                   <div class="collapse__table border_bt">' +
                     '                                        <div class="container">' +
-                    '                                            <div class="row">' +
+                    '                                            <div class="row" style="margin-bottom: 10px">' +
                     '                                                <div class="col-6">' +
                     '                                                    <span class="collapse__table__title"></span>' +
                     '                                                </div>' +                                                                  
@@ -663,12 +664,12 @@ function Modal () {
                                         '<div class="modal_block" id="efv">'+
                                         '                                        <div class="row">' +
                     '                                            <div class="col-12">' +
-                    '                                                <span class="tiles__wrapper__tile_title"></span><div class="scroll_hint" style="margin-left: 665px;margin-top: 10px;margin-bottom: 5px;position: relative;z-index: 999;"></div>' +
+                    '                                                <span class="tiles__wrapper__tile_title"></span>' +
                     '                                            </div>' +
                     '                                        </div>' +
                     '                                   <div class="collapse__table border_bt">' +
                     '                                        <div class="container">' +
-                    '                                            <div class="row">' +
+                    '                                            <div class="row"  style="margin-bottom: 15px;">' +
                     '                                                <div class="col-6" style="text-align:right">' +
                     '                                                    <span class="collapse__table__title">Тыс. м2</span>' +
                     '                                                </div>' +

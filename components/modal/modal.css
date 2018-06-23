@@ -90,6 +90,7 @@ div#cir {
 .modal_title{
     font-size: 16px;
     color: #fff;
+    float: left;
     font-weight: 400;
 }
 .timer {

@@ -126,7 +126,7 @@ function Rbpr_tile () {
                 {"category": "Недвижимость","currFact": "1072.57","val": "0.5","drawVal": "","prevFact": "6207.18"},
                 {"category": "Блок HR","currFact": "1651.05","val": "0.5","drawVal": "","prevFact": "51.53"},
                 {"category": "Блок Риски","currFact": "69.4","val": "0.4","drawVal": "","prevFact": "926.35"},
-                {"category": "Внут. плата","currFact": "4722.61","val": "0.4","drawVal": "","prevFact": "18594.81"},
+                {"category": "Внут. платы","currFact": "4722.61","val": "0.4","drawVal": "","prevFact": "18594.81"},
                 {"category": "CIB","currFact": "1072.57","val": "0.1","drawVal": "","prevFact": "6207.18"},
                 {"category": "SBI","currFact": "1072.57","val": "0.0","drawVal": "","prevFact": "6207.18"},
                 {"category": "УБ","currFact": "1072.57","val": "0.0","drawVal": "","prevFact": "6207.18"},
