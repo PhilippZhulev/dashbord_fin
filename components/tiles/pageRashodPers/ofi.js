@@ -157,58 +157,59 @@ function Ofi_tile () {
 
 var chart = AmCharts.makeChart( "ofi_chart2",{
     "type": "serial",
-    "fontFamily": "'Open Sans', sans-serif",
-    "categoryField": "name",
-    "columnWidth": 0.6,
-    "color": "#FFFFFF",
-    "rotate": true,
-    "theme": "dark",
-    "export": {
-                   "enabled": true
-    },
-    "categoryAxis": {
-                   "gridPosition": "start",
-                   "axisColor": "#a0aab7",
-                   "color": "#c9cbce",
-                   "fontSize":14,
+           "fontFamily": "'Open Sans', sans-serif",
+           "categoryField": "name",
+           "columnWidth": 0.6,
+           "color":"#a1abb8",
+           "rotate": true,
+           "marginRight": 40,
+           "theme": "dark",
+           "export": {
+               "enabled": true
+           },
+           "categoryAxis": {
+               "gridPosition": "start",
+               "axisColor": "#a0aab7",
+               "color": "#c9cbce",
+               "fontSize": 14,
+               "gridThickness": 0,
+               "axisAlpha": 0
+           },
+           "trendLines": [],
+           "graphs": [
+               {
+                   "balloonText": "[[category]]:<br>[[value]] млрд. руб",
+                   "colorField": "color",
+                   "fillAlphas": 0.8,
+                   "id": "AmGraph-1",
+                   "fixedColumnWidth": 20,
+                   "fontSize": 13,
+                   "labelText": "[[balloonValue]]",
+                   "lineColor": "#36414D",
+                   "color": "#DCDDDF",
+                   "openField": "open",
+                   "type": "column",
+                   "valueField": "close"
+               }
+           ],
+           "guides": [],
+           "valueAxes": [
+               {
+                   "axisFrequency": 0,
+                   "id": "ValueAxis-1",
+                   "logarithmic": true,
+                   "color": "#DCDDDF",
+                   "axisAlpha": 0,
+                   "axisThickness": 0,
                    "gridThickness": 0,
-                   "axisAlpha": 0
-    },
-    "trendLines": [],
-    "graphs": [
-                   {
-                                   "balloonText": "<span style='color:[[color]]'>[[category]]</span><br><b>[[balloonValue]]</b>",
-                                   "colorField": "color",
-                                   "fillAlphas": 0.8,
-                                   "id": "AmGraph-1",
-                                   "fixedColumnWidth":20,
-                                   "fontSize":13,
-                                   "labelText": "[[balloonValue]]",
-                                   "lineColor": "#36414D",
-                                   "color": "#DCDDDF",
-                                   "openField": "open",
-                                   "type": "column",
-                                   "valueField": "close"
-                   }
-    ],
-    "guides": [],
-    "valueAxes": [
-                   {
-                                   "axisFrequency": 0,
-                                   "id": "ValueAxis-1",
-                                   "logarithmic": true,
-                                   "color": "#DCDDDF",
-                                   "axisAlpha": 0,
-                                    "axisThickness": 0,
-                                   "gridThickness": 0,
-                                   "labelOffset": 1,
-                                   "labelsEnabled": false,
-                                   "tickLength": 0
-                   }
-    ],
-    "allLabels": [],
-    "balloon": {},
-    "titles": [],
+                   "labelOffset": 1,
+                   "labelsEnabled": false,
+                   "tickLength": 0
+               }
+           ],
+           "allLabels": [],
+           "balloon": {},
+           "titles": [],
     "dataProvider": [
                    {
                                    "name": "Факт ЗМ 2017",
