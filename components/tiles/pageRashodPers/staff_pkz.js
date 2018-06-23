@@ -27,7 +27,7 @@ function Staff_pkz_tile () {
             '                                                <div class="row">' +
             '                                                    <div class="col-12">' +
             '                                                        <span class="tiles__wrapper__tile_title_small">Соблюдение<br>лимита на оплату<br>труда по Блокам</span>' +
-            '                                                        <div class="chart_element__chart" style="height: 62px;" id="slot_chart"></div>' +
+            '                                                        <div class="chart_element__chart" style="height: 62px; width: calc(100% + 33px);margin-left: -13px;" id="slot_chart"></div>' +
             '                                                    <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir" data-target="ol" data-title="Отклонение от лимита РОТ">' +
             '                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">' +
             '                                                            <path  d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 16.125v2h-24v-20h2v18h22z"/>' +

@@ -978,6 +978,9 @@ span.legend_item {
     right: 10px;
     display: none;
 }
+#MESSAGE_messageview1.active {
+    display: block;
+}
 #__popover0-messagePopover-popover {
     background: #fff;
     z-index: 999!important;
@@ -1036,4 +1039,11 @@ span.legend_item {
     border-color: #6c7582!important;
     color: #6c7582!important;
     background-color: transparent!important;
+}
+#kv > div {
+    height: 519px;
+}
+.btn_i_super_mego_ofi {
+    right: 15px;
+    top: 5px;
 }
