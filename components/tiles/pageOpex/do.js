@@ -76,7 +76,7 @@ function Do_tile () {
 
         globals.chartSlideController({
             btnClass : "btn_ovi",
-            blockClass : ".do .chart_element__chart"
+            blockClass : ".do .chart_element__chart" 
         });
 
 
