@@ -211,6 +211,7 @@ globals.ModalWindow = function(options) {
                 now = attr;
                 document.querySelector(".modal_title").innerHTML = attrTitle;
                 document.getElementById(attr).classList.add("active");
+                $(window).trigger('resize');
             });
         }
 
@@ -299,6 +300,17 @@ globals.chartSlideController = function(options) {
                 blocks[i].classList.add("active");
                 btn.classList.add("active");
             }
+        }
+    });
+
+    $('html').keydown(function(event){
+        if (event.ctrlKey && event.keyCode === 112) {
+            console.log("developer mode: on");
+            $("#MESSAGE_messageview1").addClass("active");
+        }
+        if (event.ctrlKey && event.keyCode === 113) {
+            console.log("developer mode: off");
+            $("#MESSAGE_messageview1").removeClass("active");
         }
     });
 }

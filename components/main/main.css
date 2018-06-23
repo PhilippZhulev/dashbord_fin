@@ -580,11 +580,11 @@ button.btn.btn-outline-info.btn-sm.click_btn_sopf {
 }
 
 .tiles__wrapper.p_allokaciya .item_1 {
-    width: 25%;
+    width: 50%;
     height: 100%;
 }
 .tiles__wrapper.p_allokaciya .item_2 {
-    width: 75%;
+    width: 50%;
     height: 100%;
 }
 .tiles__wrapper.p_chis .column_1,
@@ -978,6 +978,9 @@ span.legend_item {
     right: 10px;
     display: none;
 }
+#MESSAGE_messageview1.active {
+    display: block;
+}
 #__popover0-messagePopover-popover {
     background: #fff;
     z-index: 999!important;
@@ -993,17 +996,54 @@ span.legend_item {
 .btn_schch {
     width: 138px;
     height: 28px;
+    padding: 0;
     text-align: left;
 }
 .btn_schch:before {
     content: 'ФБ';
     height: 28px;
+    display: block;
+    float: left;
+    width: 34px;
+    text-align: center;
     border-right: 1px solid #6c7582;
-    padding: 5px 10px;
+    padding: 5px 0;
 }
 .btn_schch:after {
     content: 'Подразделения';
     height: 28px;
-    border-right: 1px solid #6c7582;
-    padding: 5px 10px;
+    width: calc(100% - 34px);
+    text-align: center;
+    display: block;
+    float: left;
+    padding: 5px 0;
+}
+.btn-outline-info.btn_schch:not(:disabled):not(.disabled):hover,
+.btn-outline-info.btn_schch:not(:disabled):not(.disabled):active,
+.btn-outline-info.btn_schch:not(:disabled):not(.disabled).active {
+    border-color: #6c7582!important;
+    color: #6c7582!important;
+    background-color: transparent!important;
+}
+.btn_schch:before {
+    color: #fff;
+    border-color: #4e5b65!important;
+    background-color: #4e5b65!important;
+}
+.btn_schch.active:after {
+    color: #fff;
+    border-color: #4e5b65!important;
+    background-color: #4e5b65!important;
+}
+.btn_schch.active:before {
+    border-color: #6c7582!important;
+    color: #6c7582!important;
+    background-color: transparent!important;
+}
+#kv > div {
+    height: 519px;
+}
+.btn_i_super_mego_ofi {
+    right: 15px;
+    top: 5px;
 }

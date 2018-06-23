@@ -574,7 +574,9 @@ function Modal () {
                     '   </div>' +
                     '   <div class="char-block" id="sr_char"></div>' +
                     '</div>'+
-                    '<div class="modal_block" id="kv"></div>'+
+                    '<div class="modal_block" id="kv">' +
+                    '   <div id="kv_iiner" style="height: 519px"></div>' +
+                    '</div>'+
                     '<div class="modal_block focus_popup0" id="focus0"></div>'+                    
                     '<div class="modal_block focus_popup1" id="focus1"></div>'+
                     '<div class="modal_block focus_popup2" id="focus2"></div>'+
@@ -1267,7 +1269,7 @@ var chart = AmCharts.makeChart( "avm_char_2", {
             /*Конец Динамика среднего грейда*/
 		
        /*Модалка Лимит РОТ*/
-       var chart = AmCharts.makeChart("kv", {
+       var chart = AmCharts.makeChart("kv_iiner", {
         "type": "serial",
         "marginRight": 20,
         "fontFamily": "'Open Sans', sans-serif",
@@ -1556,7 +1558,14 @@ var chart = AmCharts.makeChart( "avm_char_2", {
                    "column-1": "76.2"                               }
             ]
         });
-
+        $(window).on("resize", function() {
+            new iScroll('kv',{
+                snap: true,
+                momentum: false,
+                hScrollbar: false,
+                vScrollbar: false
+            });
+        });
     /*конец this.reDraw = function()*/
     }
 /*конец function Modal()*/
