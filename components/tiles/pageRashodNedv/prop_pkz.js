@@ -26,7 +26,7 @@ function Prop_pkz_tile () {
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
 '                                                        <span class="tiles__wrapper__tile_title_small">Показатели эффективности</span>' +
-            '                                            <div class="chart_element__chart" style="height: 62px;" id="eff_chart"></div>' +
+            '                                            <div class="chart_element__chart" style="height: 62px;    width: calc(100% + 33px);margin-left: -13px;" id="eff_chart"></div>' +
 '                                                    </div>' +
 '                                                </div>' +
 '                                            </div>' +
@@ -35,7 +35,7 @@ function Prop_pkz_tile () {
 '                                            <div class="container">' +
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
-'                                                        <span class="tiles__wrapper__tile_title_small">Рост ставки эксплуатации vs инфляция за 2018</span>' +
+'                                                        <span class="tiles__wrapper__tile_title_small">KPI: Рост ставки эксплуатации vs инфляция за 2018</span>' +
 '                                                        <strong class="tiles__wrapper__tile_values v_green">1.87' +
 '                                                            <br>' +
 '                                                            <span>тыс.руб/м2</span>' +
@@ -48,10 +48,10 @@ function Prop_pkz_tile () {
 '                                            <div class="container">' +
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
-'                                                        <span class="tiles__wrapper__tile_title_small">Исполнение плана<br>выбытия</span>' +
+'                                                        <span class="tiles__wrapper__tile_title_small">KPI: Исполнение плана<br>выбытия</span>' +
 '                                                        <strong class="tiles__wrapper__tile_values v_green">14%' +
 '                                                        </strong>' +
-'                                                        <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir" data-target="efv" data-title="Исполнение плана выбытия, млрд. руб">' +
+'                                                        <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir" data-target="efv" data-title="Исполнение плана выбытия, млрд. руб" data-scroll="true">' +
 '                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">' +
 '                                                                <path  d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 16.125v2h-24v-20h2v18h22z"/>' +
 '                                                            </svg>' +
@@ -65,7 +65,7 @@ function Prop_pkz_tile () {
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
 '                                                        <span class="tiles__wrapper__tile_title_small">Портфель<br>недвижимости</span>' +
-'                                                    <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir" data-target="pnb" data-title="Портфель недвижимости Банка">' +
+'                                                        <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir" data-target="pnb" data-title="Портфель недвижимости Банка">' +
 '                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">' +
 '                                                            <path  d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 16.125v2h-24v-20h2v18h22z"/>' +
 '                                                        </svg>' +
@@ -83,7 +83,7 @@ function Prop_pkz_tile () {
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
 '                                                        <span class="tiles__wrapper__tile_title_small">Эффект от выбытия</span>' +
-'                                                    <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir" data-target="efv" data-title="Эффект от выбытия, млрд. руб">' +
+'                                                    <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir" data-target="efv" data-title="Эффект от выбытия, млрд. руб" data-scroll="true">' +
 '                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">' +
 '                                                            <path  d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 16.125v2h-24v-20h2v18h22z"/>' +
 '                                                        </svg>' +
@@ -173,7 +173,7 @@ function Prop_pkz_tile () {
 '                                                        <span class="tiles__wrapper__tile_title_small">Средний тариф на пост охраны</span>' +
 '                                                        <strong class="tiles__wrapper__tile_values v_green">111.8' +
 '                                                            <br>' +
-'                                                            <span>руб.час</span>' +
+'                                                            <span>руб./час</span>' +
 '                                                        </strong>' +
 '                                                    </div>' +
 '                                                </div>' +
@@ -183,10 +183,10 @@ function Prop_pkz_tile () {
 '                                            <div class="container">' +
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
-'                                                        <span class="tiles__wrapper__tile_title_small">Средний тариф на пультовую охрану<br>ВСП</span>' +
+'                                                        <span class="tiles__wrapper__tile_title_small">Средний тариф на<br>пультовую охрану ВСП</span>' +
 '                                                        <strong class="tiles__wrapper__tile_values v_green">1.4' +
 '                                                            <br>' +
-'                                                            <span>тыс.руб/мес</span>' +
+'                                                            <span>тыс. руб/мес</span>' +
 '                                                        </strong>' +
 '                                                    </div>' +
 '                                                </div>' +
@@ -199,7 +199,7 @@ function Prop_pkz_tile () {
 '                                                        <span class="tiles__wrapper__tile_title_small">Обеспеченность площадью в группе "Офисы"</span>' +
 '                                                        <strong class="tiles__wrapper__tile_values v_green">18' +
 '                                                            <br>' +
-'                                                            <span>м2/раб.место</span>' +
+'                                                            <span>м2/раб. место</span>' +
 '                                                        </strong>' +
 '                                                    </div>' +
 '                                                </div>' +

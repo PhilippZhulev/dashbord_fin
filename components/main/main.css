@@ -1047,3 +1047,25 @@ span.legend_item {
     right: 15px;
     top: 5px;
 }
+.scroll_ico:before {
+    content: '';
+    background: url(../../img/scroll-hint-white.png) center no-repeat;
+    background-size: 30px;
+    width: 30px;
+    height: 28px;
+    float: left;
+    position: relative;
+    margin-left: 15px;
+    top: -3px;
+    transform: rotate(90deg);
+    opacity: 0.3;
+    z-index: 199;
+    display: none;
+}
+.scroll_ico.active:before {
+    display: block;
+}
+#pnb {
+    background: url(../../img/portf_nedv.jpg) center no-repeat;
+    background-size: 73%;
+}

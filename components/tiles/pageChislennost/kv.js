@@ -29,7 +29,7 @@ function Kv_tile () {
     this.reDraw = function(a) {
         try {
             this.refresh();
-            var incoming_data = window.data.kv//this.globalSettings[a[0]];
+            var incoming_data = window.data.lim_rot//this.globalSettings[a[0]];
             var globalSettings = this.globalSettings;
 
             globals.renderComponent(globalSettings, {
@@ -41,7 +41,7 @@ function Kv_tile () {
                 '                                            <div class="row">' +
                 '                                                <div class="col-12">' +
                 '                                                    <span class="tiles__wrapper__tile_title">Лимит РОТ</span><br>' +
-                '                                                    <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir" data-target="kv" data-title="Лимит РОТ, млрд. руб">' +
+                '                                                    <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir" data-target="kv" data-title="Лимит РОТ, млрд. руб" data-scroll="true">' +
                 '                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">' +
                 '                                                            <path  d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 16.125v2h-24v-20h2v18h22z"/>' +
                 '                                                        </svg>' +

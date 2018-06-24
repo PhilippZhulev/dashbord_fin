@@ -194,7 +194,7 @@ function Schch_tile () {
 
             var chart = AmCharts.makeChart("schch_g_2", {
                 "type": "serial",
-                "marginRight": 20,
+                "marginRight": 40,
                 "fontFamily": "'Open Sans', sans-serif",
                 "categoryField": "category",
                 "columnSpacing": 2,
@@ -256,7 +256,7 @@ function Schch_tile () {
                 "valueAxes": [
                     {
                         "id": "ValueAxis-1",
-                        "logarithmic": true,
+                        //"logarithmic": true,
                         "position": "right",
                         "axisAlpha": 0,
                         "axisThickness": 0,
@@ -299,7 +299,7 @@ function Schch_tile () {
 
             var chart = AmCharts.makeChart("schch_lay_2", {
                 "type": "serial",
-                "marginRight": 30,
+                "marginRight": 40,
                 "fontFamily": "'Open Sans', sans-serif",
                 "categoryField": "category",
                 "columnSpacing": 2,
@@ -361,7 +361,7 @@ function Schch_tile () {
                 "valueAxes": [
                     {
                         "id": "ValueAxis-1",
-                        "logarithmic": true,
+                       // "logarithmic": true,
                         "position": "right",
                         "axisAlpha": 0,
                         "axisThickness": 0,
