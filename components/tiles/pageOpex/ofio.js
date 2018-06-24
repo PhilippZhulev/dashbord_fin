@@ -58,8 +58,8 @@ function Ofio_tile () {
    for(var i=0;i<incoming_data.length;i++){
        var obj={};
        obj.name=incoming_data[i].category;
-       obj.open=parseFloat(incoming_data[i].fact)||100;
-       obj.close=parseFloat(incoming_data[i].plan)||100;
+       obj.open=parseFloat(incoming_data[i].fact)||5;
+       obj.close=parseFloat(incoming_data[i].plan)||5;
        obj.color=colors[i];
        obj.balloonValue=incoming_data[i].fact_prev;
        data.push(obj)}

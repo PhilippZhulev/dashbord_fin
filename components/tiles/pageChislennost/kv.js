@@ -29,7 +29,7 @@ function Kv_tile () {
     this.reDraw = function(a) {
         try {
             this.refresh();
-            var incoming_data = window.data.kv//this.globalSettings[a[0]];
+            var incoming_data = window.data.lim_rot//this.globalSettings[a[0]];
             var globalSettings = this.globalSettings;
 
             globals.renderComponent(globalSettings, {

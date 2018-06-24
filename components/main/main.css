@@ -1056,7 +1056,7 @@ span.legend_item {
     float: left;
     position: relative;
     margin-left: 15px;
-    top: 0px;
+    top: -3px;
     transform: rotate(90deg);
     opacity: 0.3;
     z-index: 199;
@@ -1064,4 +1064,8 @@ span.legend_item {
 }
 .scroll_ico.active:before {
     display: block;
+}
+#pnb {
+    background: url(../../img/portf_nedv.jpg) center no-repeat;
+    background-size: 73%;
 }

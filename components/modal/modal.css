@@ -35,13 +35,7 @@
 .modal_header {
     height: 30px;
     width: 100%;
-    display: table;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.modal_header {
-    height: 30px;
-    width: 100%;
-    display: table;
+    display: flex;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 4px 15px;
 }
@@ -49,11 +43,10 @@ span.modal_close {
     display: block;
     width: 25px;
     height: 25px;
-    float: right;
-    background: url("close.svg") center no-repeat;
+    background: url(close.svg) center no-repeat;
     background-size: 70%;
-    margin-top: 4px;
     cursor: pointer;
+    margin: 0 0 0 auto;
 }
 .modal_body {
     height: calc(100% - 30px);
@@ -87,10 +80,9 @@ div#cir {
 .modal_block_big.active {
     display: block;
 }
-.modal_title{
+.modal_title {
     font-size: 16px;
     color: #fff;
-    float: left;
     font-weight: 400;
 }
 .timer {

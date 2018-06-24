@@ -35,7 +35,7 @@ function Prop_pkz_tile () {
 '                                            <div class="container">' +
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
-'                                                        <span class="tiles__wrapper__tile_title_small">Рост ставки эксплуатации vs инфляция за 2018</span>' +
+'                                                        <span class="tiles__wrapper__tile_title_small">KPI: Рост ставки эксплуатации vs инфляция за 2018</span>' +
 '                                                        <strong class="tiles__wrapper__tile_values v_green">1.87' +
 '                                                            <br>' +
 '                                                            <span>тыс.руб/м2</span>' +
@@ -48,7 +48,7 @@ function Prop_pkz_tile () {
 '                                            <div class="container">' +
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
-'                                                        <span class="tiles__wrapper__tile_title_small">Исполнение плана<br>выбытия</span>' +
+'                                                        <span class="tiles__wrapper__tile_title_small">KPI: Исполнение плана<br>выбытия</span>' +
 '                                                        <strong class="tiles__wrapper__tile_values v_green">14%' +
 '                                                        </strong>' +
 '                                                        <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir" data-target="efv" data-title="Исполнение плана выбытия, млрд. руб" data-scroll="true">' +
@@ -173,7 +173,7 @@ function Prop_pkz_tile () {
 '                                                        <span class="tiles__wrapper__tile_title_small">Средний тариф на пост охраны</span>' +
 '                                                        <strong class="tiles__wrapper__tile_values v_green">111.8' +
 '                                                            <br>' +
-'                                                            <span>руб.час</span>' +
+'                                                            <span>руб./час</span>' +
 '                                                        </strong>' +
 '                                                    </div>' +
 '                                                </div>' +
@@ -183,10 +183,10 @@ function Prop_pkz_tile () {
 '                                            <div class="container">' +
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
-'                                                        <span class="tiles__wrapper__tile_title_small">Средний тариф на пультовую охрану<br>ВСП</span>' +
+'                                                        <span class="tiles__wrapper__tile_title_small">Средний тариф на<br>пультовую охрану ВСП</span>' +
 '                                                        <strong class="tiles__wrapper__tile_values v_green">1.4' +
 '                                                            <br>' +
-'                                                            <span>тыс.руб/мес</span>' +
+'                                                            <span>тыс. руб/мес</span>' +
 '                                                        </strong>' +
 '                                                    </div>' +
 '                                                </div>' +
@@ -199,7 +199,7 @@ function Prop_pkz_tile () {
 '                                                        <span class="tiles__wrapper__tile_title_small">Обеспеченность площадью в группе "Офисы"</span>' +
 '                                                        <strong class="tiles__wrapper__tile_values v_green">18' +
 '                                                            <br>' +
-'                                                            <span>м2/раб.место</span>' +
+'                                                            <span>м2/раб. место</span>' +
 '                                                        </strong>' +
 '                                                    </div>' +
 '                                                </div>' +
