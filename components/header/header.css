@@ -17,7 +17,7 @@ span.filters_block__title {
   display: table-cell;
   vertical-align: middle;
   height: auto;
-  position: relative;
+  position: relative; 
 }
 span.bank_group {
     position: absolute;
