@@ -1,34 +1,33 @@
-function Ar_tile() {
+function Alloc2_right_tile() {
     this.reDraw = function (a) {
-        console.warn("ar_chart");
+        console.warn("pa_chart");
         try {
             this.refresh();
-            var incoming_data = window.data.alloc_zatrat
-
-            ;//this.globalSettings[a[0]];
+            var incoming_data =  window.data.alloc_dohod2;//this.globalSettings[a[0]];
             var globalSettings = this.globalSettings;
 
 
-            var screen_data = [];
+            var screen_data=[];
 
-            for (var i = 0; i < incoming_data.length; i++) {
-                var obj = {};
-                obj.screen = incoming_data[i].screen;
-                obj.tile = incoming_data[i].tile;
-                obj.block = incoming_data[i].block;
-                obj.category = incoming_data[i].category;
-                obj.fact = incoming_data[i].fact;
-                obj.plan = incoming_data[i].plan;
-                obj.fact_prev = incoming_data[i].fact_prev;
-                obj.mera = incoming_data[i].mera;
-                obj.color1 = incoming_data[i].color1;
-                obj.proc1 = incoming_data[i].proc1;
-                obj.text1 = incoming_data[i].text1;
-                obj.color2 = incoming_data[i].color2;
-                obj.proc2 = incoming_data[i].proc2;
-                obj.text2 = incoming_data[i].text2;
-                obj.isParent = incoming_data[i].isParent;
-                obj.addClass = incoming_data[i].addClass;
+            for(var i=0;i<incoming_data.length;i++)
+            {
+                var obj={};
+                obj.screen=incoming_data[i].screen;
+                obj.tile=incoming_data[i].tile;
+                obj.block=incoming_data[i].block;
+                obj.category=incoming_data[i].category;
+                obj.fact=incoming_data[i].fact;
+                obj.plan=incoming_data[i].plan;
+                obj.fact_prev=incoming_data[i].fact_prev;
+                obj.mera=incoming_data[i].mera;
+                obj.color1=incoming_data[i].color1;
+                obj.proc1=incoming_data[i].proc1;
+                obj.text1=incoming_data[i].text1;
+                obj.color2=incoming_data[i].color2;
+                obj.proc2=incoming_data[i].proc2;
+                obj.text2=incoming_data[i].text2;
+                obj.isParent=incoming_data[i].isParent;
+                obj.addClass=incoming_data[i].addClass;
                 screen_data.push(obj)
             }
             //var expData=JSON.parse("["+this.globalSettings.Settings.cir_data+"]");
@@ -37,38 +36,38 @@ function Ar_tile() {
             var child_tmp = [];
             var parent_prev = {};
             var parent_assigned = false;
-            for (i = 0; i < screen_data.length; i++) {
-                var obj = {};
+            for (i=0;i<screen_data.length;i++){
+                var obj={};
                 //console.log("Here, boi "+i);
-                if (screen_data[i].isParent == "parent") {
+                if(screen_data[i].isParent==="parent"){
                     //console.log("New parent: "+screen_data[i].category+", now exist "+child_tmp.length+" children");
-                    if (parent_assigned) {
-                        parent_prev.children = JSON.parse(JSON.stringify(child_tmp));
-                        child_tmp = [];
+                    if(parent_assigned){
+                        parent_prev.children=JSON.parse(JSON.stringify(child_tmp));
+                        child_tmp=[];
                         table_tmp.push(JSON.parse(JSON.stringify(parent_prev)));
                         parent_prev = {};
                     }
-                    obj.parent = screen_data[i].category;
-                    obj.plan = screen_data[i].plan;
-                    obj.fact = screen_data[i].fact;
-                    obj.fact_prev = screen_data[i].fact_prev;
-                    obj.addClass = screen_data[i].addClass;
+                    obj.parent=screen_data[i].category;
+                    obj.plan=screen_data[i].plan;
+                    obj.fact=screen_data[i].fact;
+                    obj.fact_prev=screen_data[i].fact_prev;
+                    obj.addClass=screen_data[i].addClass;
                     parent_prev = JSON.parse(JSON.stringify(obj));
                     parent_assigned = true;
-                } else {
-                    obj.name = screen_data[i].category;
-                    obj.plan = screen_data[i].plan;
-                    obj.fact = screen_data[i].fact;
-                    obj.fact_prev = screen_data[i].fact_prev;
-                    if (screen_data[i].addClass != "") {
-                        obj.addclass = screen_data[i].addClass;
-                        obj.link = true;
+                }else{
+                    obj.name=screen_data[i].category;
+                    obj.plan=screen_data[i].plan;
+                    obj.fact=screen_data[i].fact;
+                    obj.fact_prev=screen_data[i].fact_prev;
+                    if(screen_data[i].addClass!=""){
+                        obj.addclass=screen_data[i].addClass;
+                        obj.link=true;
                     }
                     child_tmp.push(JSON.parse(JSON.stringify(obj)));
                 }
             }
-            parent_prev.children = JSON.parse(JSON.stringify(child_tmp));
-            child_tmp = [];
+            parent_prev.children=JSON.parse(JSON.stringify(child_tmp));
+            child_tmp=[];
             table_tmp.push(JSON.parse(JSON.stringify(parent_prev)));
             parent_prev = {};
             globals.kroTableElms = JSON.parse(JSON.stringify(table_tmp));
@@ -148,66 +147,60 @@ function Ar_tile() {
 
                 var element = "";
 
-                function childs(childArr) {
+                function childs (childArr) {
                     var child = "",
                         className,
                         classLink;
-                    for (var ic = 0; ic < childArr.length; ic++) {
-                        if (childArr[ic].addclass !== undefined) {
+                    for(var ic = 0; ic < childArr.length; ic++) {
+                        if(childArr[ic].addclass !== undefined) {
                             className = " " + childArr[ic].addclass;
-                        } else {
+                        }else {
                             className = "";
                         }
 
-                        if (childArr[ic].link === true) {
+                        if(childArr[ic].link === true) {
                             classLink = " " + "this_link";
-                        } else {
+                        }else {
                             classLink = "";
                         }
 
                         child +=
-                            '<div class="row' + className + '">' +
+                            '<div class="row'+ className +'">' +
                             '   <div class="col-6">' +
-                            '       <span class="collapse__table__title' + classLink + '">' + childArr[ic].name + '</span>' +
+                            '       <span class="collapse__table__title' + classLink + '">'+ childArr[ic].name +'</span>' +
                             '   </div>' +
-                            '   <div class="col-2">' +
-                            '       <span class="collapse__table__title">' + childArr[ic].fact + '</span>' +
+                            '   <div class="col-3">' +
+                            '       <span class="collapse__table__title">'+ childArr[ic].fact +'</span>' +
                             '   </div>' +
-                            '   <div class="col-2">' +
-                            '       <span class="collapse__table__title">' + childArr[ic].plan + '</span>' +
-                            '   </div>' +
-                            '   <div class="col-2">' +
-                            '       <span class="collapse__table__title">' + childArr[ic].fact_prev + '</span>' +
+                            '   <div class="col-3">' +
+                            '       <span class="collapse__table__title">'+ childArr[ic].plan +'</span>' +
                             '   </div>' +
                             '</div>';
                     }
                     return child;
                 }
 
-                for (var inc = 0; inc < Arr.length; inc++) {
+                for(var inc = 0; inc < Arr.length; inc++) {
                     tmp = "";
-                    if (Arr[inc].addClass != "") {
-                        tmp = " this_link";
+                    if(Arr[inc].addClass!=""){
+                        tmp=" this_link";
                     }
                     element +=
                         '<div class="collapse_title kro_collapse_t">' +
-                        '      <div class="row ' + Arr[inc].addClass + '">' +
+                        '      <div class="row '+Arr[inc].addClass+'">' +
                         '           <div class="col-6">' +
-                        '               <span class="collapse__table__title' + tmp + '">' + Arr[inc].parent + '</span>' +
+                        '               <span class="collapse__table__title'+tmp+'">'+ Arr[inc].parent +'</span>' +
                         '           </div>' +
-                        '           <div class="col-2">' +
-                        '               <span class="collapse__table__title">' + Arr[inc].fact + '</span>' +
+                        '           <div class="col-3">' +
+                        '               <span class="collapse__table__title">'+ Arr[inc].fact +'</span>' +
                         '           </div>' +
-                        '           <div class="col-2">' +
-                        '               <span class="collapse__table__title">' + Arr[inc].plan + '</span>' +
-                        '           </div>' +
-                        '           <div class="col-2">' +
-                        '               <span class="collapse__table__title">' + Arr[inc].fact_prev + '</span>' +
+                        '           <div class="col-3">' +
+                        '               <span class="collapse__table__title">'+ Arr[inc].plan +'</span>' +
                         '           </div>' +
                         '       </div>' +
                         '</div>' +
                         '<div class="collapse_container">' +
-                        childs(Arr[inc].children) +
+                        childs (Arr[inc].children) +
                         '</div>';
                 }
                 return element;
@@ -215,16 +208,14 @@ function Ar_tile() {
 
 
             globals.renderComponent(globalSettings, {
-                tag: "div",
-                className: ["tiles__wrapper__item", "item_1"],
+                tag : "div",
+                className : ["tiles__wrapper__item", "item_1"],
                 html:
                 '                                <div class="tiles__wrapper__tile">' +
                 '                                    <div class="container">' +
                 '                                        <div class="row">' +
                 '                                            <div class="col-12">' +
-                '                                                <span class="tiles__wrapper__tile_title">Аллокация по центрам затрат<span>млрд. руб</span></span>' +
-                '                                                <button type="button" class="btn btn-outline-info btn-abc btn-sm btn_nbsb btn_alloc2">Правила аллокации</button>' +
-                '                                                 <div class="scroll_hint"></div>' +
+                '                                                <span class="tiles__wrapper__tile_title">Аллокация по центрам прибыли<span>млрд. руб</span></span>' +
                 '                                            </div>' +
                 '                                        </div>' +
                 '                                    </div>' +
@@ -233,11 +224,11 @@ function Ar_tile() {
                 '                                            <div class="row">' +
                 '                                                <div class="col-6">' +
                 '                                                </div>' +
-                '                                                <div class="col-2">' +
+                '                                                <div class="col-3">' +
                 '                                                    <span class="collapse__table__title">Факт \'18</span>' +
                 '                                                </div>' +
-                '                                                <div class="col-4" style="text-align: center">' +
-                '                                                    <span class="collapse__table__title">vs 3М\'17 </span>' +
+                '                                                <div class="col-3" style="text-align: center">' +
+
                 '                                                </div>' +
 // '                                                <div class="col-2">' +
 // '                                                    <span class="collapse__table__title">3-Заголовок</span>' +
@@ -246,9 +237,9 @@ function Ar_tile() {
                 '                                        </div>' +
                 '                                     <div class="border_bt_table_1"></div>' +
                 '                                    </div>' +
-                '                                    <div class="collapse__table" id="ar_scroll_wrap">' +
+                '                                    <div class="collapse__table">' +
                 '                                        <div class="container">' +
-                '                                            <div class="collapse_wrap ar_collpse" style="height: 550px;">' +
+                '                                            <div class="collapse_wrap pa2_collpse">' +
                 collapseElements(globals.kroTableElms) +
                 '                                            </div>' +
                 '                                        </div>' +
@@ -256,32 +247,9 @@ function Ar_tile() {
                 '                                </div>'
             });
 
-            globals.navigation({
-                btn: ".btn_alloc2",
-                page: ".p_allokaciya2",
-                callback: function () {
-                    globalSettings.Settings.result = ".p_allokaciya2";
-                    globalSettings.that_c.firePropertiesChangedAndEvent(["SettingsTP"], "tech1");
-                }
-            });
 
-            globals.Collapse(".ar_collpse .kro_collapse_t", {
-                open: true,
-                callback: function () {
-                    new iScroll('ar_scroll_wrap', {
-                        snap: false,
-                        momentum: false,
-                        hScrollbar: false,
-                        vScrollbar: false
-                    });
-                }
-            });
-            new iScroll('ar_scroll_wrap', {
-                snap: false,
-                momentum: false,
-                hScrollbar: false,
-                vScrollbar: false
-            });
+
+            globals.Collapse(".pa2_collpse .kro_collapse_t", {open: true});
         } catch (e) {
             globals.renderComponent(globalSettings, {
                 tag: "div",

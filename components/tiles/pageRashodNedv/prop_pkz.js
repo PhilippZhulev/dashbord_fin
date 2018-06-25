@@ -38,7 +38,7 @@ function Prop_pkz_tile () {
 '                                                        <span class="tiles__wrapper__tile_title_small">KPI: Рост ставки эксплуатации vs инфляция за 2018</span>' +
 '                                                        <strong class="tiles__wrapper__tile_values v_green">1.87' +
 '                                                            <br>' +
-'                                                            <span>тыс.руб/м2</span>' +
+'                                                            <span>тыс. руб/м2</span>' +
 '                                                        </strong>' +
 '                                                    </div>' +
 '                                                </div>' +
@@ -49,7 +49,7 @@ function Prop_pkz_tile () {
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
 '                                                        <span class="tiles__wrapper__tile_title_small">KPI: Исполнение плана<br>выбытия</span>' +
-'                                                        <strong class="tiles__wrapper__tile_values v_green">14%' +
+'                                                        <strong class="tiles__wrapper__tile_values v_red">14%' +
 '                                                        </strong>' +
 '                                                        <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir" data-target="efv" data-title="Исполнение плана выбытия, млрд. руб" data-scroll="true">' +
 '                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">' +
@@ -70,7 +70,7 @@ function Prop_pkz_tile () {
 '                                                            <path  d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 16.125v2h-24v-20h2v18h22z"/>' +
 '                                                        </svg>' +
 '                                                    </button>' +
-'                                                        <strong class="tiles__wrapper__tile_values v_green">6159' +
+'                                                        <strong class="tiles__wrapper__tile_values ">6159' +
 '                                                            <br>' +
 '                                                            <span>тыс. м2</span>' +
 '                                                        </strong>' +
@@ -88,7 +88,7 @@ function Prop_pkz_tile () {
 '                                                            <path  d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 16.125v2h-24v-20h2v18h22z"/>' +
 '                                                        </svg>' +
 '                                                    </button>' +
-'                                                        <strong class="tiles__wrapper__tile_values v_green">0.2' +
+'                                                        <strong class="tiles__wrapper__tile_values ">0.2' +
 '                                                            <br>' +
 '                                                            <span>млрд. руб</span>' +
 '                                                        </strong>' +
@@ -101,7 +101,7 @@ function Prop_pkz_tile () {
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
 '                                                        <span class="tiles__wrapper__tile_title_small">Ставка аренды</span>' +
-'                                                        <strong class="tiles__wrapper__tile_values v_green">15.4' +
+'                                                        <strong class="tiles__wrapper__tile_values ">15.4' +
 '                                                            <br>' +
 '                                                            <span>тыс. руб./м2</span>' +
 '                                                        </strong>' +
@@ -114,7 +114,7 @@ function Prop_pkz_tile () {
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
 '                                                        <span class="tiles__wrapper__tile_title_small">Ставка эксплуатации</span>' +
-'                                                        <strong class="tiles__wrapper__tile_values v_red">1.9' +
+'                                                        <strong class="tiles__wrapper__tile_values ">1.9' +
 '                                                            <br>' +
 '                                                            <span>тыс. руб./м2</span>' +
 '                                                        </strong>' +
@@ -132,11 +132,11 @@ function Prop_pkz_tile () {
 '                                                            <path  d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 16.125v2h-24v-20h2v18h22z"/>' +
 '                                                        </svg>' +
 '                                                    </button>' +*/
-'                                                        <strong class="tiles__wrapper__tile_values v_red" style="display: inline-block">+13' +
+'                                                        <strong class="tiles__wrapper__tile_values " style="display: inline-block">+13' +
 '                                                            <br>' +
 '                                                            <span>тыс. м2</span>' +
 '                                                        </strong>' +
-'                                                        <strong class="tiles__wrapper__tile_values v_red" style="display: inline-block; font-size: 26px; font-weight: 300">+85' +
+'                                                        <strong class="tiles__wrapper__tile_values " style="display: inline-block; font-size: 26px; font-weight: 300">+85' +
 '                                                            <br>' +
 '                                                            <span>млрд. руб</span>' +
 '                                                        </strong>' +
@@ -154,11 +154,11 @@ function Prop_pkz_tile () {
 '                                                            <path  d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 16.125v2h-24v-20h2v18h22z"/>' +
 '                                                        </svg>' +
 '                                                    </button>' +*/
-'                                                        <strong class="tiles__wrapper__tile_values v_red" style="display: inline-block">-348' +
+'                                                        <strong class="tiles__wrapper__tile_values " style="display: inline-block">-348' +
 '                                                            <br>' +
 '                                                            <span>тыс. м2</span>' +
 '                                                        </strong>' +
-'                                                        <strong class="tiles__wrapper__tile_values v_red" style="display: inline-block; font-size: 26px; font-weight: 300">-288' +
+'                                                        <strong class="tiles__wrapper__tile_values " style="display: inline-block; font-size: 26px; font-weight: 300">-288' +
 '                                                            <br>' +
 '                                                            <span>млрд. руб</span>' +
 '                                                        </strong>' +
@@ -171,9 +171,9 @@ function Prop_pkz_tile () {
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
 '                                                        <span class="tiles__wrapper__tile_title_small">Средний тариф на пост охраны</span>' +
-'                                                        <strong class="tiles__wrapper__tile_values v_green">111.8' +
+'                                                        <strong class="tiles__wrapper__tile_values ">111.8' +
 '                                                            <br>' +
-'                                                            <span>руб./час</span>' +
+'                                                            <span>руб /час</span>' +
 '                                                        </strong>' +
 '                                                    </div>' +
 '                                                </div>' +
@@ -184,7 +184,7 @@ function Prop_pkz_tile () {
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
 '                                                        <span class="tiles__wrapper__tile_title_small">Средний тариф на<br>пультовую охрану ВСП</span>' +
-'                                                        <strong class="tiles__wrapper__tile_values v_green">1.4' +
+'                                                        <strong class="tiles__wrapper__tile_values ">1.4' +
 '                                                            <br>' +
 '                                                            <span>тыс. руб/мес</span>' +
 '                                                        </strong>' +
@@ -197,7 +197,7 @@ function Prop_pkz_tile () {
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
 '                                                        <span class="tiles__wrapper__tile_title_small">Обеспеченность площадью в группе "Офисы"</span>' +
-'                                                        <strong class="tiles__wrapper__tile_values v_green">18' +
+'                                                        <strong class="tiles__wrapper__tile_values ">18' +
 '                                                            <br>' +
 '                                                            <span>м2/раб. место</span>' +
 '                                                        </strong>' +

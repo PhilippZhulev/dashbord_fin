@@ -1,11 +1,9 @@
-function Ar_tile() {
+function Alloc2_left_tile() {
     this.reDraw = function (a) {
-        console.warn("ar_chart");
+        console.warn("ar_right");
         try {
             this.refresh();
-            var incoming_data = window.data.alloc_zatrat
-
-            ;//this.globalSettings[a[0]];
+            var incoming_data = window.data.alloc_zatrat2;//this.globalSettings[a[0]];
             var globalSettings = this.globalSettings;
 
 
@@ -40,7 +38,7 @@ function Ar_tile() {
             for (i = 0; i < screen_data.length; i++) {
                 var obj = {};
                 //console.log("Here, boi "+i);
-                if (screen_data[i].isParent == "parent") {
+                if (screen_data[i].isParent === "parent") {
                     //console.log("New parent: "+screen_data[i].category+", now exist "+child_tmp.length+" children");
                     if (parent_assigned) {
                         parent_prev.children = JSON.parse(JSON.stringify(child_tmp));
@@ -170,14 +168,11 @@ function Ar_tile() {
                             '   <div class="col-6">' +
                             '       <span class="collapse__table__title' + classLink + '">' + childArr[ic].name + '</span>' +
                             '   </div>' +
-                            '   <div class="col-2">' +
+                            '   <div class="col-3">' +
                             '       <span class="collapse__table__title">' + childArr[ic].fact + '</span>' +
                             '   </div>' +
-                            '   <div class="col-2">' +
+                            '   <div class="col-3">' +
                             '       <span class="collapse__table__title">' + childArr[ic].plan + '</span>' +
-                            '   </div>' +
-                            '   <div class="col-2">' +
-                            '       <span class="collapse__table__title">' + childArr[ic].fact_prev + '</span>' +
                             '   </div>' +
                             '</div>';
                     }
@@ -186,7 +181,7 @@ function Ar_tile() {
 
                 for (var inc = 0; inc < Arr.length; inc++) {
                     tmp = "";
-                    if (Arr[inc].addClass != "") {
+                    if (Arr[inc].addClass !== "") {
                         tmp = " this_link";
                     }
                     element +=
@@ -195,14 +190,11 @@ function Ar_tile() {
                         '           <div class="col-6">' +
                         '               <span class="collapse__table__title' + tmp + '">' + Arr[inc].parent + '</span>' +
                         '           </div>' +
-                        '           <div class="col-2">' +
+                        '           <div class="col-3">' +
                         '               <span class="collapse__table__title">' + Arr[inc].fact + '</span>' +
                         '           </div>' +
-                        '           <div class="col-2">' +
+                        '           <div class="col-3">' +
                         '               <span class="collapse__table__title">' + Arr[inc].plan + '</span>' +
-                        '           </div>' +
-                        '           <div class="col-2">' +
-                        '               <span class="collapse__table__title">' + Arr[inc].fact_prev + '</span>' +
                         '           </div>' +
                         '       </div>' +
                         '</div>' +
@@ -216,14 +208,13 @@ function Ar_tile() {
 
             globals.renderComponent(globalSettings, {
                 tag: "div",
-                className: ["tiles__wrapper__item", "item_1"],
+                className: ["tiles__wrapper__item", "item_3"],
                 html:
                 '                                <div class="tiles__wrapper__tile">' +
                 '                                    <div class="container">' +
                 '                                        <div class="row">' +
                 '                                            <div class="col-12">' +
                 '                                                <span class="tiles__wrapper__tile_title">Аллокация по центрам затрат<span>млрд. руб</span></span>' +
-                '                                                <button type="button" class="btn btn-outline-info btn-abc btn-sm btn_nbsb btn_alloc2">Правила аллокации</button>' +
                 '                                                 <div class="scroll_hint"></div>' +
                 '                                            </div>' +
                 '                                        </div>' +
@@ -233,11 +224,10 @@ function Ar_tile() {
                 '                                            <div class="row">' +
                 '                                                <div class="col-6">' +
                 '                                                </div>' +
-                '                                                <div class="col-2">' +
+                '                                                <div class="col-3">' +
                 '                                                    <span class="collapse__table__title">Факт \'18</span>' +
                 '                                                </div>' +
-                '                                                <div class="col-4" style="text-align: center">' +
-                '                                                    <span class="collapse__table__title">vs 3М\'17 </span>' +
+                '                                                <div class="col-3" style="text-align: center">' +
                 '                                                </div>' +
 // '                                                <div class="col-2">' +
 // '                                                    <span class="collapse__table__title">3-Заголовок</span>' +
@@ -246,9 +236,9 @@ function Ar_tile() {
                 '                                        </div>' +
                 '                                     <div class="border_bt_table_1"></div>' +
                 '                                    </div>' +
-                '                                    <div class="collapse__table" id="ar_scroll_wrap">' +
+                '                                    <div class="collapse__table" id="ar_scroll_wrap22" style="height: 525px;">' +
                 '                                        <div class="container">' +
-                '                                            <div class="collapse_wrap ar_collpse" style="height: 550px;">' +
+                '                                            <div class="collapse_wrap ar22_collpse" style="height: 650px">' +
                 collapseElements(globals.kroTableElms) +
                 '                                            </div>' +
                 '                                        </div>' +
@@ -256,19 +246,11 @@ function Ar_tile() {
                 '                                </div>'
             });
 
-            globals.navigation({
-                btn: ".btn_alloc2",
-                page: ".p_allokaciya2",
-                callback: function () {
-                    globalSettings.Settings.result = ".p_allokaciya2";
-                    globalSettings.that_c.firePropertiesChangedAndEvent(["SettingsTP"], "tech1");
-                }
-            });
 
-            globals.Collapse(".ar_collpse .kro_collapse_t", {
+            globals.Collapse(".ar22_collpse .kro_collapse_t", {
                 open: true,
                 callback: function () {
-                    new iScroll('ar_scroll_wrap', {
+                    new iScroll('ar_scroll_wrap22', {
                         snap: false,
                         momentum: false,
                         hScrollbar: false,
@@ -276,7 +258,7 @@ function Ar_tile() {
                     });
                 }
             });
-            new iScroll('ar_scroll_wrap', {
+            new iScroll('ar_scroll_wrap22', {
                 snap: false,
                 momentum: false,
                 hScrollbar: false,

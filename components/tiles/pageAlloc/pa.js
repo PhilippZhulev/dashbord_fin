@@ -39,7 +39,7 @@ function Pa_tile () {
         for (i=0;i<screen_data.length;i++){
             var obj={};
             //console.log("Here, boi "+i);
-            if(screen_data[i].isParent=="parent"){
+            if(screen_data[i].isParent==="parent"){
                 //console.log("New parent: "+screen_data[i].category+", now exist "+child_tmp.length+" children");
                 if(parent_assigned){
                     parent_prev.children=JSON.parse(JSON.stringify(child_tmp));
@@ -187,7 +187,7 @@ function Pa_tile () {
                 tmp = "";
                 if(Arr[inc].addClass!=""){
                     tmp=" this_link";
-                } 
+                }
                 element +=
                 '<div class="collapse_title kro_collapse_t">' +
                 '      <div class="row '+Arr[inc].addClass+'">' +

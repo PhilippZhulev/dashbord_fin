@@ -4,7 +4,7 @@ function initPage () {
         console.warn("initPage0")
         //this.getBuffer("capex$$_$$capex_graph_data$$_$$chis$$_$$cir$$_$$cir_map$$_$$focus$$_$$kr$$_$$opex$$_$$opex_graph_data","run");
 
-        this.getBuffer("alloc_zatrat$$_$$alloc_dohod$$_$$kro$$_$$do$$_$$do_inf$$_$$sopf$$_$$fio$$_$$up$$_$$tp$$_$$sr$$_$$lim_rot$$_$$sptch$$_$$schtch1$$_$$schtch2$$_$$schtch_total$$_$$dchtch$$_$$pokaz_nedv$$_$$ofin$$_$$ka$$_$$krpn$$_$$cir$$_$$opex$$_$$chis$$_$$capex$$_$$kr$$_$$kr_dzo$$_$$focus$$_$$opex_graph_data$$_$$capex_graph_data$$_$$cir_map$$_$$cir_modal_map$$_$$cir_modal","run");
+        this.getBuffer("alloc_zatrat2$$_$$alloc_dohod2$$_$$alloc_zatrat$$_$$alloc_dohod$$_$$kro$$_$$do$$_$$do_inf$$_$$sopf$$_$$fio$$_$$up$$_$$tp$$_$$sr$$_$$lim_rot$$_$$sptch$$_$$schtch1$$_$$schtch2$$_$$schtch_total$$_$$dchtch$$_$$pokaz_nedv$$_$$ofin$$_$$ka$$_$$krpn$$_$$cir$$_$$opex$$_$$chis$$_$$capex$$_$$kr$$_$$kr_dzo$$_$$focus$$_$$opex_graph_data$$_$$capex_graph_data$$_$$cir_map$$_$$cir_modal_map$$_$$cir_modal","run");
     }
 
     this.run = function(a) {

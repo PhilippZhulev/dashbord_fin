@@ -587,6 +587,20 @@ button.btn.btn-outline-info.btn-sm.click_btn_sopf {
     width: 50%;
     height: 100%;
 }
+
+.tiles__wrapper.p_allokaciya2 .item_1 {
+    width: 37.5%;
+    height: 100%;
+}
+.tiles__wrapper.p_allokaciya2 .item_2 {
+    width: 25%;
+    height: 100%;
+}
+.tiles__wrapper.p_allokaciya2 .item_3 {
+    width: 37.5%;
+    height: 100%;
+}
+
 .tiles__wrapper.p_chis .column_1,
 .tiles__wrapper.p_chis .column_2 {
     flex: 100%;
@@ -719,10 +733,12 @@ dl, ol, ul {
     padding-top: 10px;
 }
 .collapse_container span.collapse__table__title {
-    padding-left: 10px;
     color: #DCDDDF;
     opacity: 1;
     display: block;
+}
+.collapse_container .col-6  span.collapse__table__title {
+    padding-left: 10px;
 }
 strong {
     font-weight: 300;

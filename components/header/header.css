@@ -125,6 +125,13 @@ b.pages_title {
     padding-left: 15px;
     display: flex;
 }
+.navigation_block_right {
+    height: 44px;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    display: flex;
+}
 span.bank_group {
     position: absolute;
     right: 50px;
