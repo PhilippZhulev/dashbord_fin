@@ -304,7 +304,7 @@ function Prop_pkz_tile () {
             }
         );
         new iScroll('wrapper_3',{
-            snap: true,
+            snap: false,
             momentum: false,
             hScrollbar: false,
             vScrollbar: false

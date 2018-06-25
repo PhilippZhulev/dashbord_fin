@@ -1579,31 +1579,31 @@ var chart = AmCharts.makeChart( "avm_char_2", {
         });
         $(window).on("resize", function() {
             new iScroll('wrapper_6',{
-                snap: true,
+                snap: false,
                 momentum: false,
                 hScrollbar: false,
                 vScrollbar: false
             });
             new iScroll('kv',{
-                snap: true,
+                snap: false,
                 momentum: false,
                 hScrollbar: false,
                 vScrollbar: false
             });
             new iScroll('wrapper_1_vap',{
-                snap: true,
+                snap: false,
                 momentum: false,
                 hScrollbar: false,
                 vScrollbar: false
             });
             new iScroll('wrapper_6',{
-                snap: true,
+                snap: false,
                 momentum: false,
                 hScrollbar: false,
                 vScrollbar: false
             });
             new iScroll('wrapper_1_vap',{
-                snap: true,
+                snap: false,
                 momentum: false,
                 hScrollbar: false,
                 vScrollbar: false

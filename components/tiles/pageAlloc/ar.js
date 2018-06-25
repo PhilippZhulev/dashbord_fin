@@ -247,7 +247,7 @@ function Ar_tile () {
 '                                    </div>' +
 '                                    <div class="collapse__table">' +
 '                                        <div class="container">' +
-'                                            <div class="collapse_wrap kro_collpse">' +
+'                                            <div class="collapse_wrap ar_collpse" id="ar_scroll_wrap">' +
                                                 collapseElements(globals.kroTableElms) +
 '                                            </div>' +
 '                                        </div>' +
@@ -257,8 +257,14 @@ function Ar_tile () {
 
 
 
-        globals.Collapse(".kro_collpse .kro_collapse_t", {open: true});
+        globals.Collapse(".ar_collpse .kro_collapse_t", {open: true});
 
+        new iScroll('ar_scroll_wrap', {
+            snap: false,
+            momentum: false,
+            hScrollbar: false,
+            vScrollbar: false
+        });
     }catch(e){
             globals.renderComponent (globalSettings, {
                 tag : "div",

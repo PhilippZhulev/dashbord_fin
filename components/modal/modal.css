@@ -101,3 +101,12 @@ div#cir {
     background: url("opex_m.jpg") center no-repeat;
     background-size: 53%;
 }
+div#wrapper_1_vap {
+    height: 270px;
+}
+strong.tiles__wrapper__tile_values.v_green {
+    color: #30cb67;
+}
+strong.tiles__wrapper__tile_values.v_red {
+    color: rgb(245, 166, 35);
+}

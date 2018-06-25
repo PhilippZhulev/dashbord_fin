@@ -142,7 +142,7 @@ function Krpn_tile () {
             '                                    </div>' +
             '                                    <div class="collapse__table"  id="wrapper_5">' +
             '                                        <div class="container" style="padding-bottom: 10px">' +
-            '                                            <div class="collapse_wrap kro_collpse">' +
+            '                                            <div class="collapse_wrap krpn_collpse">' +
                                                             collapseElements(globals.krpnTableElms) +
             '                                            </div>' +
             '                                        </div>' +
@@ -158,7 +158,7 @@ function Krpn_tile () {
             vScrollbar: false
         });
 
-        globals.Collapse(".kro_collpse .collapse_title", {open: true});
+        globals.Collapse(".krpn_collpse .collapse_title", {open: true});
     }
     catch(e){
         globals.renderComponent (globalSettings, {

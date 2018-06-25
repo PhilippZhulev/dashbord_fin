@@ -245,7 +245,7 @@ function Pa_tile () {
 '                                    </div>' +
 '                                    <div class="collapse__table">' +
 '                                        <div class="container">' +
-'                                            <div class="collapse_wrap kro_collpse">' +
+'                                            <div class="collapse_wrap pa_collpse">' +
                                                 collapseElements(globals.kroTableElms) +
 '                                            </div>' +
 '                                        </div>' +
@@ -255,7 +255,7 @@ function Pa_tile () {
 
 
 
-        globals.Collapse(".kro_collpse .kro_collapse_t", {open: true});
+        globals.Collapse(".pa_collpse .kro_collapse_t", {open: true});
 
     }catch(e){
             globals.renderComponent (globalSettings, {
