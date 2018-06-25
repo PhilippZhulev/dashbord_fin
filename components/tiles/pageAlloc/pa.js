@@ -221,7 +221,7 @@ function Pa_tile () {
 '                                    <div class="container">' +
 '                                        <div class="row">' +
 '                                            <div class="col-12">' +
-'                                                <span class="tiles__wrapper__tile_title">Аллокация центрам прибыли<span>млрд. руб</span></span>' +
+'                                                <span class="tiles__wrapper__tile_title">Аллокация по центрам прибыли<span>млрд. руб</span></span>' +
 '                                            </div>' +
 '                                        </div>' +
 '                                    </div>' +
@@ -231,14 +231,14 @@ function Pa_tile () {
 '                                                <div class="col-6">' +
 '                                                </div>' +
 '                                                <div class="col-2">' +
-'                                                    <span class="collapse__table__title">1-Заголовок</span>' +
+'                                                    <span class="collapse__table__title">Факт \'18</span>' +
 '                                                </div>' +
-'                                                <div class="col-2">' +
-'                                                    <span class="collapse__table__title">2-Заголовок</span>' +
+'                                                <div class="col-4" style="text-align: center">' +
+'                                                    <span class="collapse__table__title">vs 3М\'17 </span>' +
 '                                                </div>' +
-'                                                <div class="col-2">' +
-'                                                    <span class="collapse__table__title">3-Заголовок</span>' +
-'                                                </div>' +
+// '                                                <div class="col-2">' +
+// '                                                    <span class="collapse__table__title">3-Заголовок</span>' +
+// '                                                </div>' +
 '                                            </div>' +
 '                                        </div>' +
 '                                     <div class="border_bt_table_1"></div>' +

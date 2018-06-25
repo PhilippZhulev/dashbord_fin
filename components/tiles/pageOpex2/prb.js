@@ -88,7 +88,7 @@ function Prb_tile () {
                         name: "Блок Т",
                         fact: "19.6",
                         plan: "-10.2%",
-                        fact_proc: "4.5%"
+                        fact_proc: "3.6%"
                     },
                     {
                         name: "Блок С",

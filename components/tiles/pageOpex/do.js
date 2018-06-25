@@ -171,8 +171,8 @@ function Do_tile () {
             "categoryField": "category",
             "zoomOutButtonRollOverAlpha": 0,
             "colors": [
-                "#DFDFDF",
-                "#6EC7F7"
+                "#6EC7F7",
+                "#DFDFDF"
             ],
             "sequencedAnimation": false,
             "startDuration": 0,
@@ -195,8 +195,8 @@ function Do_tile () {
                     "balloonText": "[[category]]: [[value]]%",
                     "bullet": "round",
                     "bulletBorderAlpha": 1,
-                    "bulletBorderColor": "#DFDFDF",
-                    "bulletColor": "#DFDFDF",
+                    "bulletBorderColor": "#6EC7F7",
+                    "bulletColor": "#6EC7F7",
                     "bulletSize": 3,
                     "id": "AmGraph-1",
                     "fontSize": 13,
@@ -209,8 +209,8 @@ function Do_tile () {
                     "balloonText": "[[category]]: [[value]]%",
                     "bullet": "round",
                     "bulletBorderAlpha": 1,
-                    "bulletBorderColor": "#6EC7F7",
-                    "bulletColor": "#6EC7F7",
+                    "bulletBorderColor": "#DFDFDF",
+                    "bulletColor": "#DFDFDF",
                     "bulletSize": 3,
                     "id": "AmGraph-2",
                     "fontSize": 13,

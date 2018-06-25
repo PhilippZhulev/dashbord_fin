@@ -26,12 +26,6 @@ function ReplaceWith(Ele) {
     }
 }
 
-$(document).on("ready",function () {
-    alert("Загрузился!");
-});
-
-
-
 // prevent all scroll //
 $('body').on('touchmove', function(e) {
     e.preventDefault();
@@ -94,8 +88,6 @@ globals.renderComponent = function(g,prop) {
 
     app.innerHTML = prop.html;
     app.classList.add(myClass);
-
-    console.log(myClass);
 
     if(document.getElementById(g.teg + '_COMPONENT') !== null) {
         document.getElementById(g.teg + '_COMPONENT').parentNode.parentNode.replaceWith(app);
@@ -207,6 +199,14 @@ globals.ModalWindow = function(options) {
 
                 attr = this.getAttribute("data-target");
                 var attrTitle = this.getAttribute("data-title");
+
+                var scroll_ico = document.querySelector(".scroll_ico");
+                console.log(this.getAttribute("data-scroll"));
+                if(this.getAttribute("data-scroll") === "true") {
+                    scroll_ico.classList.add("active");
+                }else {
+                    scroll_ico.classList.remove("active");
+                }
 
                 now = attr;
                 document.querySelector(".modal_title").innerHTML = attrTitle;

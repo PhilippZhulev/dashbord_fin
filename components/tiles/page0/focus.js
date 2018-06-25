@@ -66,7 +66,7 @@ function Focus_tile () {
                 '                                                <div class="row">' +
                 '                                                    <div class="col-12">' +
                 '                                                        <span class="tiles__wrapper__tile_title_small">'+incoming_data[i].category+'</span>' +
-                    '                                                    <button type="button" class="btn-open-modal my_super_info_btn" data-target="focus'+i+'" data-title="'+incoming_data[i].category+'"></button>' +
+                    '                                                    <button type="button" class="btn-open-modal my_super_info_btn" data-target="'+incoming_data[i].text1+'" data-title="'+incoming_data[i].category+'"></button>' +
                 '                                                        <strong class="tiles__wrapper__tile_values v_'+incoming_data[i].color1+'">'+incoming_data[i].fact+'<span class="smal_val">'+incoming_data[i].text2+'</span>' +
                 '                                                            <br>' +
                 '                                                            <span>'+incoming_data[i].mera+'</span>' +

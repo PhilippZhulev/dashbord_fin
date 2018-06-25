@@ -541,6 +541,7 @@ function Modal () {
             '<div class="modal_inner">'+
                 '<div class="modal_header">'+
                     '<span class="modal_title"></span>' +
+                    '<span class="scroll_ico"></span>' +
                     '<span class="modal_close"></span>' +
                 '</div>'+
                 '<div class="modal_body">'+
@@ -575,13 +576,19 @@ function Modal () {
                     '   <div class="char-block" id="sr_char"></div>' +
                     '</div>'+
                     '<div class="modal_block" id="kv">' +
-                    '   <div id="kv_iiner" style="height: 519px"></div>' +
+                    '   <div id="kv_iiner" style="height: 800px"></div>' +
                     '</div>'+
-                    '<div class="modal_block focus_popup0" id="focus0"></div>'+                    
-                    '<div class="modal_block focus_popup1" id="focus1"></div>'+
-                    '<div class="modal_block focus_popup2" id="focus2"></div>'+
-                    '<div class="modal_block focus_popup3" id="focus3"></div>'+
-                    '<div class="modal_block focus_popup4" id="focus4"></div>'+
+                    '<div class="modal_block" id="focus_fact0"></div>'+
+                    '<div class="modal_block" id="focus_fact1"></div>'+
+                    '<div class="modal_block" id="focus_fact2"></div>'+
+                    '<div class="modal_block" id="focus_fact3"></div>'+
+                    '<div class="modal_block" id="focus_fact4"></div>'+
+                    '<div class="modal_block" id="focus_prognoz0"></div>'+
+                    '<div class="modal_block" id="focus_prognoz1"></div>'+
+                    '<div class="modal_block" id="focus_prognoz2"></div>'+
+                    '<div class="modal_block" id="focus_prognoz3"></div>'+
+                    '<div class="modal_block" id="focus_prognoz4"></div>'+
+                    '<div class="modal_block" id="focus_prognoz5"></div>'+
                     '<div class="modal_block_big" id="cir_map_big"></div>'+
                     '<div class="modal_block" id="pnb">'+
 //                    '                                    <div class="container">' +
@@ -591,49 +598,49 @@ function Modal () {
 //                    '                                            </div>' +
 //                    '                                        </div>' +
 //                    '                                    </div>' +
-                    '                                   <div class="collapse__table border_bt">' +
-                    '                                        <div class="container">' +
-                    '                                            <div class="row">' +
-                    '                                                <div class="col-6">' +
-                    '                                                    <span class="collapse__table__title"></span>' +
-                    '                                                </div>' +                                                                  
-                    '                                                <div class="col-2">' +
-                    '                                                    <span class="collapse__table__title">тыс. м2</span>' +
-                    '                                                </div>' +
-                    '                                                <div class="col-2">' +
-                    '                                                    <span class="collapse__table__title"></span>' +
-                    '                                                </div>' +
-                    '                                                <div class="col-2">' +
-                    '                                                    <span class="collapse__table__title">Факт 3М18<br>vs факт ЗМ17</span>' +
-                    '                                                </div>' +
-                    '                                            </div>' +
-                    '                                        </div>' +
-                    '                                    </div>' +
-                    '                                    <div class="collapse__table">' +
-                    '                                        <div class="container">' +
-                    '                                            <div class="row">' +
-                    '                                                <div class="col-6">' +
-                    '                                                    <span class="collapse__table__title">Итого</span>' +
-                    '                                                </div>' +
-                    '                                                <div class="col-2">' +
-                    '                                                    <span class="collapse__table__title">6159</span>' +
-                    '                                                </div>' +
-                    '                                                <div class="col-2">' +
-                    '                                                    <span class="collapse__table__title">-101</span>' +
-                    '                                                </div>' +
-                    '                                                <div class="col-2">' +
-                    '                                                    <span class="collapse__table__title">-1.6%</span>' +
-                    '                                                </div>' +
-                    '                                            </div>' +
-                    '                                        </div>' +
-                    '                                    </div>' +
-                    '                                    <div class="collapse__table">' +
-                    '                                        <div class="container">' +
-                    '                                            <div class="collapse_wrap kro_collpse">' +
-                                                                    collapseElements_pnb(globals.pnbTableElms) +
-                    '                                            </div>' +
-                    '                                        </div>' +
-                    '                                    </div>'+
+//                     '                                   <div class="collapse__table border_bt">' +
+//                     '                                        <div class="container">' +
+//                     '                                            <div class="row" style="margin-bottom: 10px">' +
+//                     '                                                <div class="col-6">' +
+//                     '                                                    <span class="collapse__table__title"></span>' +
+//                     '                                                </div>' +
+//                     '                                                <div class="col-2">' +
+//                     '                                                    <span class="collapse__table__title">тыс. м2</span>' +
+//                     '                                                </div>' +
+//                     '                                                <div class="col-2">' +
+//                     '                                                    <span class="collapse__table__title"></span>' +
+//                     '                                                </div>' +
+//                     '                                                <div class="col-2">' +
+//                     '                                                    <span class="collapse__table__title">Факт 3М18<br>vs факт ЗМ17</span>' +
+//                     '                                                </div>' +
+//                     '                                            </div>' +
+//                     '                                        </div>' +
+//                     '                                    </div>' +
+//                     '                                    <div class="collapse__table">' +
+//                     '                                        <div class="container">' +
+//                     '                                            <div class="row">' +
+//                     '                                                <div class="col-6">' +
+//                     '                                                    <span class="collapse__table__title">Итого</span>' +
+//                     '                                                </div>' +
+//                     '                                                <div class="col-2">' +
+//                     '                                                    <span class="collapse__table__title">6159</span>' +
+//                     '                                                </div>' +
+//                     '                                                <div class="col-2">' +
+//                     '                                                    <span class="collapse__table__title">-101</span>' +
+//                     '                                                </div>' +
+//                     '                                                <div class="col-2">' +
+//                     '                                                    <span class="collapse__table__title">-1.6%</span>' +
+//                     '                                                </div>' +
+//                     '                                            </div>' +
+//                     '                                        </div>' +
+//                     '                                    </div>' +
+//                     '                                    <div class="collapse__table">' +
+//                     '                                        <div class="container">' +
+//                     '                                            <div class="collapse_wrap kro_collpse">' +
+//                                                                     collapseElements_pnb(globals.pnbTableElms) +
+//                     '                                            </div>' +
+//                     '                                        </div>' +
+//                     '                                    </div>'+
                     '</div>'+
                     '<div class="modal_block" id="smds">Тут график среднемесячного дохода сотрудника</div>'+
                     '<div class="modal_block" id="ol">'+
@@ -659,24 +666,16 @@ function Modal () {
                     '                                            </div>' +
                     '                                        </div>' +
                     '                                    </div>'+
-                    '</div>'+
-                                        '<div class="modal_block" id="efv">'+
-                                        '                                        <div class="row">' +
+                    '                               </div>'+
+                    '                               <div class="modal_block" id="efv">'+
+                    '                                        <div class="row">' +
                     '                                            <div class="col-12">' +
-                    '                                                <span class="tiles__wrapper__tile_title"></span><div class="scroll_hint" style="margin-left: 665px;margin-top: 10px;margin-bottom: 5px;position: relative;z-index: 999;"></div>' +
+                    '                                                <span class="tiles__wrapper__tile_title"></span>' +
                     '                                            </div>' +
                     '                                        </div>' +
                     '                                   <div class="collapse__table border_bt">' +
                     '                                        <div class="container">' +
-                    '                                            <div class="row">' +
-                    '                                                <div class="col-6" style="text-align:right">' +
-                    '                                                    <span class="collapse__table__title">Тыс. м2</span>' +
-                    '                                                </div>' +
-                    '                                                <div class="col-6" style="text-align:right">' +
-                    '                                                    <span class="collapse__table__title">Млрд. руб</span>' +
-                    '                                                </div>' +
-                    '                                            </div>'+
-                    '                                            <div class="row">' +
+                    '                                            <div class="row"  style="margin-bottom: 15px;">' +
                     '                                                <div class="col-2">' +
                     '                                                </div>' +
                     '                                                <div class="col-2">' +
@@ -696,6 +695,25 @@ function Modal () {
                     '                                                </div>' +
                     '                                                 <div class="table_border"></div>' +
                     '                                            </div>' +
+                    '                                            <div class="row">' +
+                    '                                                <div class="col-2">' +
+                    '                                                </div>' +
+                    '                                                <div class="col-2">' +
+                    '                                                    <span class="collapse__table__title">Млрд.руб.</span>' +
+                    '                                                </div>' +
+                    '                                                <div class="col-2">' +
+                    '                                                    <span class="collapse__table__title">Тыс.м2</span>' +
+                    '                                                </div>' +
+                    '                                                <div class="col-2">' +
+                    '                                                    <span class="collapse__table__title">%</span>' +
+                    '                                                </div>' +
+                    '                                                <div class="col-2">' +
+                    '                                                    <span class="collapse__table__title">Млрд.руб.</span>' +
+                    '                                                </div>' +
+                    '                                                <div class="col-2">' +
+                    '                                                    <span class="collapse__table__title">Млрд.руб.</span>' +
+                    '                                                </div>' +
+                    '                                            </div>'+
                     '                                        </div>' +
                     '                                    </div>' +
                     '                                    <div class="collapse__table" id="wrapper_1_vap">' +
@@ -730,13 +748,6 @@ function Modal () {
                 '</div>'+
         '</div>'
     });
-
-        new iScroll('wrapper_1_vap',{
-            snap: true,
-            momentum: false,
-            hScrollbar: false,
-            vScrollbar: false
-        });
 
 var chart = AmCharts.makeChart( "avm_char_1", {
                 "type": "serial",
@@ -910,12 +921,6 @@ var chart = AmCharts.makeChart( "avm_char_2", {
                 ]
 });
 
-        new iScroll('wrapper_6',{
-            snap: true,
-            momentum: false,
-            hScrollbar: false,
-            vScrollbar: false
-        });
 
         globals.Collapse(".kro_collpse .collapse_title");
 
@@ -1231,7 +1236,7 @@ var chart = AmCharts.makeChart( "avm_char_2", {
             {
                 "id": "ValueAxis-1",
                 "maximum": 15,
-                "minimum": 10,
+                "minimum": 5,
                 "axisThickness": 0,
                 "axisColor": "#A0AAB7",
                 "gridThickness": 0,
@@ -1245,24 +1250,29 @@ var chart = AmCharts.makeChart( "avm_char_2", {
         "titles": [],
         "dataProvider": [
             {
-                "category": "2015",
-                "line-1": "11.9",
-                "line-2": "10.9"
+                "category": "1кв. 2017",
+                "line-1": "8.8",
+                "line-2": "6.7"
             },
             {
-                "category": "2016",
-                "line-1": "11.9",
-                "line-2": "10.9"
+                "category": "2кв. 2017",
+                "line-1": "9.1",
+                "line-2": "6.7"
             },
             {
-                "category": "2017",
-                "line-1": "12",
-                "line-2": "11"
+                "category": "3кв. 2017",
+                "line-1": "9.0",
+                "line-2": "6.7"
             },
             {
-                "category": "2018",
-                "line-1": "12.1",
-                "line-2": "11.1"
+                "category": "4кв. 2017",
+                "line-1": "9.1",
+                "line-2": "6.7"
+            },
+            {
+                "category": "1кв. 2018",
+                "line-1": "9.1",
+                "line-2": "6.7"
             }
         ]
     });
@@ -1333,7 +1343,7 @@ var chart = AmCharts.makeChart( "avm_char_2", {
         "valueAxes": [
             {
                 "id": "ValueAxis-1",
-                "logarithmic": true,
+                //"logarithmic": true,
                 "position": "right",
                 "axisAlpha": 0,
                 "axisThickness": 0,
@@ -1345,17 +1355,26 @@ var chart = AmCharts.makeChart( "avm_char_2", {
         "allLabels": [],
         "balloon": {},
         "titles": [],
-        "dataProvider": [{"category":"Итого","fact":"232206.7","plan":"240367.4","fact_prev":"96.6"},
-                        {"category":"РБ","fact":"138886.7","plan":"140118.7","fact_prev":"99.1"},
-                        {"category":"КБ","fact":"20676.6","plan":"21166.5","fact_prev":"97.6"},
-                        {"category":"CIB","fact":"1789.5","plan":"2227","fact_prev":"80.3"},
-                        {"category":"SBI","fact":"58.6","plan":"81","fact_prev":"72.3"},
-                        {"category":"УБ","fact":"875.2","plan":"986","fact_prev":"88.7"},
-                        {"category":"Блок С","fact":"40428.0","plan":"42639.2","fact_prev":"94.8"},
-                        {"category":"Блок Т","fact":"16111.2","plan":"18587","fact_prev":"86.6"},
-                        {"category":"ДРПА","fact":"5385.1","plan":"5876","fact_prev":"91.6"},
-                        {"category":"Риски","fact":"4365.4","plan":"4725","fact_prev":"92.3"},
-                        {"category":"Финансы","fact":"3630.2","plan":"3961","fact_prev":"91.6"}]
+        "dataProvider": [
+            {"category":"РБ","fact":"21.2","plan":"21.2","fact_prev":"99.1"},
+            {"category":"Блок Т","fact":"12.1","plan":"11.7","fact_prev":"86.6"},
+            {"category":"Блок С","fact":"8.6","plan":"8.6","fact_prev":"94.8"},
+            {"category":"CIB","fact":"2.1","plan":"2.3","fact_prev":"80.3"},
+            {"category":"ДРПА","fact":"1.8","plan":"1.9","fact_prev":"91.6"},
+            {"category":"Риски","fact":"1.4","plan":"1.6","fact_prev":"92.3"},
+            {"category":"Финансы","fact":"1.4","plan":"1.4","fact_prev":"91.6"},
+            {"category":"Рук-во (ЦА и ТБ)","fact":"1.4","plan":"1.1","fact_prev":"91.6"},
+            {"category":"Блок GR","fact":"1.2","plan":"1.3","fact_prev":"94.8"},
+            {"category":"HR","fact":"0.9","plan":"1.0","fact_prev":"94.8"},
+            {"category":"УБ","fact":"0.8","plan":"0.9","fact_prev":"94.8"},
+            {"category":"УВКРиА","fact":"0.6","plan":"0.6","fact_prev":"94.8"},
+            {"category":"Вне блоков","fact":"0.4","plan":"0.4","fact_prev":"94.8"},
+            {"category":"Маркетинг","fact":"0.2","plan":"0.3","fact_prev":"94.8"},
+            {"category":"Блок CP","fact":"0.2","plan":"0.2","fact_prev":"94.8"},
+            {"category":"Тер. развитие","fact":"0.1","plan":"0.1","fact_prev":"94.8"},
+            {"category":"ДРЦБ","fact":"0.1","plan":"0.1","fact_prev":"94.8"},
+            {"category":"SBI","fact":"0.1","plan":"0.1","fact_prev":"94.8"}
+            ]
     });
         /*Конец лимит РОТ*/	
 		
@@ -1559,7 +1578,31 @@ var chart = AmCharts.makeChart( "avm_char_2", {
             ]
         });
         $(window).on("resize", function() {
+            new iScroll('wrapper_6',{
+                snap: true,
+                momentum: false,
+                hScrollbar: false,
+                vScrollbar: false
+            });
             new iScroll('kv',{
+                snap: true,
+                momentum: false,
+                hScrollbar: false,
+                vScrollbar: false
+            });
+            new iScroll('wrapper_1_vap',{
+                snap: true,
+                momentum: false,
+                hScrollbar: false,
+                vScrollbar: false
+            });
+            new iScroll('wrapper_6',{
+                snap: true,
+                momentum: false,
+                hScrollbar: false,
+                vScrollbar: false
+            });
+            new iScroll('wrapper_1_vap',{
                 snap: true,
                 momentum: false,
                 hScrollbar: false,
