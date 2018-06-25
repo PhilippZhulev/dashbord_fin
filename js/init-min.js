@@ -270,6 +270,11 @@ globals.Collapse = function (els, prop) {
         } else {
             panel.style.maxHeight = panel.scrollHeight + "px";
         }
+        if(prop !== undefined) {
+            if(prop.callback !== undefined) {
+                prop.callback();
+            }
+        }
         return false;
     }
 

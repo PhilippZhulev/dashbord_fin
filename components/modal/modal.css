@@ -104,9 +104,12 @@ div#cir {
 div#wrapper_1_vap {
     height: 270px;
 }
-strong.tiles__wrapper__tile_values.v_green {
+.INCLUDE_PROP_PKZ_control_COMPONENT strong.tiles__wrapper__tile_values.v_green {
     color: #30cb67;
 }
-strong.tiles__wrapper__tile_values.v_red {
+.INCLUDE_PROP_PKZ_control_COMPONENT strong.tiles__wrapper__tile_values.v_red {
     color: rgb(245, 166, 35);
+}
+div#ar_scroll_wrap {
+    height: 520px;
 }
