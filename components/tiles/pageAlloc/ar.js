@@ -236,7 +236,7 @@ function Ar_tile() {
                 '                                                <div class="col-2">' +
                 '                                                    <span class="collapse__table__title">Факт \'18</span>' +
                 '                                                </div>' +
-                '                                                <div class="col-4" style="text-align: center">' +
+                '                                                <div class="col-3" style="text-align: center">' +
                 '                                                    <span class="collapse__table__title">vs 3М\'17 </span>' +
                 '                                                </div>' +
 // '                                                <div class="col-2">' +

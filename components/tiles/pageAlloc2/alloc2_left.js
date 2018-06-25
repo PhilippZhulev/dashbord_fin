@@ -168,12 +168,12 @@ function Alloc2_left_tile() {
                             '   <div class="col-6">' +
                             '       <span class="collapse__table__title' + classLink + '">' + childArr[ic].name + '</span>' +
                             '   </div>' +
-                            '   <div class="col-3">' +
+                            '   <div class="col-4" style="text-align: right">' +
                             '       <span class="collapse__table__title">' + childArr[ic].fact + '</span>' +
                             '   </div>' +
-                            '   <div class="col-3">' +
-                            '       <span class="collapse__table__title">' + childArr[ic].plan + '</span>' +
-                            '   </div>' +
+                            // '   <div class="col-3">' +
+                            // '       <span class="collapse__table__title">' + childArr[ic].plan + '</span>' +
+                            // '   </div>' +
                             '</div>';
                     }
                     return child;
@@ -190,12 +190,12 @@ function Alloc2_left_tile() {
                         '           <div class="col-6">' +
                         '               <span class="collapse__table__title' + tmp + '">' + Arr[inc].parent + '</span>' +
                         '           </div>' +
-                        '           <div class="col-3">' +
+                        '           <div class="col-4" style="text-align: right">' +
                         '               <span class="collapse__table__title">' + Arr[inc].fact + '</span>' +
                         '           </div>' +
-                        '           <div class="col-3">' +
-                        '               <span class="collapse__table__title">' + Arr[inc].plan + '</span>' +
-                        '           </div>' +
+                        // '           <div class="col-3">' +
+                        // '               <span class="collapse__table__title">' + Arr[inc].plan + '</span>' +
+                        // '           </div>' +
                         '       </div>' +
                         '</div>' +
                         '<div class="collapse_container">' +
@@ -224,10 +224,8 @@ function Alloc2_left_tile() {
                 '                                            <div class="row">' +
                 '                                                <div class="col-6">' +
                 '                                                </div>' +
-                '                                                <div class="col-3">' +
-                '                                                    <span class="collapse__table__title">Факт \'18</span>' +
-                '                                                </div>' +
-                '                                                <div class="col-3" style="text-align: center">' +
+                '                                                <div class="col-4" style="text-align: right">' +
+                '                                                    <span class="collapse__table__title">Факт</span>' +
                 '                                                </div>' +
 // '                                                <div class="col-2">' +
 // '                                                    <span class="collapse__table__title">3-Заголовок</span>' +
@@ -238,7 +236,7 @@ function Alloc2_left_tile() {
                 '                                    </div>' +
                 '                                    <div class="collapse__table" id="ar_scroll_wrap22" style="height: 525px;">' +
                 '                                        <div class="container">' +
-                '                                            <div class="collapse_wrap ar22_collpse" style="height: 650px">' +
+                '                                            <div class="collapse_wrap ar22_collpse" style="height: 680px">' +
                 collapseElements(globals.kroTableElms) +
                 '                                            </div>' +
                 '                                        </div>' +

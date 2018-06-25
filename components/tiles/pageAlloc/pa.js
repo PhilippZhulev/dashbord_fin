@@ -236,9 +236,6 @@ function Pa_tile () {
 '                                                <div class="col-4" style="text-align: center">' +
 '                                                    <span class="collapse__table__title">vs 3М\'17 </span>' +
 '                                                </div>' +
-// '                                                <div class="col-2">' +
-// '                                                    <span class="collapse__table__title">3-Заголовок</span>' +
-// '                                                </div>' +
 '                                            </div>' +
 '                                        </div>' +
 '                                     <div class="border_bt_table_1"></div>' +

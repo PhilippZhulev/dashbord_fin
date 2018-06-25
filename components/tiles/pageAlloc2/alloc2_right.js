@@ -169,10 +169,10 @@ function Alloc2_right_tile() {
                             '   <div class="col-6">' +
                             '       <span class="collapse__table__title' + classLink + '">'+ childArr[ic].name +'</span>' +
                             '   </div>' +
-                            '   <div class="col-3">' +
+                            '   <div class="col-3" style="text-align: right">' +
                             '       <span class="collapse__table__title">'+ childArr[ic].fact +'</span>' +
                             '   </div>' +
-                            '   <div class="col-3">' +
+                            '   <div class="col-3" style="text-align: right">' +
                             '       <span class="collapse__table__title">'+ childArr[ic].plan +'</span>' +
                             '   </div>' +
                             '</div>';
@@ -191,11 +191,11 @@ function Alloc2_right_tile() {
                         '           <div class="col-6">' +
                         '               <span class="collapse__table__title'+tmp+'">'+ Arr[inc].parent +'</span>' +
                         '           </div>' +
-                        '           <div class="col-3">' +
+                        '           <div class="col-3" style="text-align: right">' +
                         '               <span class="collapse__table__title">'+ Arr[inc].fact +'</span>' +
                         '           </div>' +
-                        '           <div class="col-3">' +
-                        '               <span class="collapse__table__title">'+ Arr[inc].plan +'</span>' +
+                        '           <div class="col-3" style="text-align: right">' +
+                        '               <span class="collapse__table__title">'+ Arr[inc].fact_prev +'</span>' +
                         '           </div>' +
                         '       </div>' +
                         '</div>' +
@@ -224,11 +224,11 @@ function Alloc2_right_tile() {
                 '                                            <div class="row">' +
                 '                                                <div class="col-6">' +
                 '                                                </div>' +
-                '                                                <div class="col-3">' +
-                '                                                    <span class="collapse__table__title">Факт \'18</span>' +
+                '                                                <div class="col-3" style="text-align: right">' +
+                '                                                    <span class="collapse__table__title">%</span>' +
                 '                                                </div>' +
-                '                                                <div class="col-3" style="text-align: center">' +
-
+                '                                                <div class="col-3" style="text-align: right">' +
+                '                                                    <span class="collapse__table__title">Факт</span>' +
                 '                                                </div>' +
 // '                                                <div class="col-2">' +
 // '                                                    <span class="collapse__table__title">3-Заголовок</span>' +
