@@ -832,67 +832,67 @@ button.btn.btn-outline-info.btn-abc.btn-sm.btn-ref {
     height: 95%;
 }
 #focus_fact0{
-    background-size: 60%!important;
+    background-size: 60%;
     background: url("../../img/Push1.JPG");
     background-position: center;
     background-repeat: no-repeat;
 }
 #focus_fact1{
-    background-size: 60%!important;
+    background-size: 60%;
     background: url("../../img/Push2.JPG");
     background-position: center;
     background-repeat: no-repeat;
 }
 #focus_fact2{
-    background-size: 60%!important;
+    background-size: 60%;
     background: url("../../img/Push3.JPG");
     background-position: center;
     background-repeat: no-repeat;
 }
 #focus_fact3{
-    background-size: 60%!important;
+    background-size: 60%;
     background: url("../../img/Push4.JPG");
     background-position: center;
     background-repeat: no-repeat;
 }
 #focus_fact4{
-    background-size: 60%!important;
+    background-size: 60%;
     background: url("../../img/Push5.JPG");
     background-position: center;
     background-repeat: no-repeat;
 }
 #focus_prognoz0{
-    background-size: 60%!important;
+    background-size: 60%;
     background: url("../../img/fp1.JPG");
     background-position: center;
     background-repeat: no-repeat;
 }
 #focus_prognoz1{
-    background-size: 60%!important;
+    background-size: 60%;
     background: url("../../img/fp2.JPG");
     background-position: center;
     background-repeat: no-repeat;
 }
 #focus_prognoz2{
-    background-size: 60%!important;
+    background-size: 60%;
     background: url("../../img/fp3.JPG");
     background-position: center;
     background-repeat: no-repeat;
 }
 #focus_prognoz3{
-    background-size: 60%!important;
+    background-size: 60%;
     background: url("../../img/fp4.JPG");
     background-position: center;
     background-repeat: no-repeat;
 }
 #focus_prognoz4{
-    background-size: 60%!important;
+    background-size: 60%;
     background: url("../../img/fp5.JPG");
     background-position: center;
     background-repeat: no-repeat;
 }
 #focus_prognoz5{
-    background-size: 60%!important;
+    background-size: 60%;
     background: url("../../img/fp6.JPG");
     background-position: center;
     background-repeat: no-repeat;
@@ -910,7 +910,18 @@ button.btn.btn-outline-info.btn-abc.btn-sm.btn-ref {
     opacity: 0.3;
     transform: rotate(90deg);
 }
-
+.touch_hint{
+    background: url("../../img/touch-hint-white.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 11px;
+    opacity: 0.3;
+}
 ul.pa_list{
     margin-bottom: 5px;
     display: block;
@@ -1120,4 +1131,7 @@ span.legend_item {
 #pnb {
     background: url(../../img/portf_nedv.jpg) center no-repeat;
     background-size: 73%;
+}
+.true_lh {
+    line-height: 0px;
 }

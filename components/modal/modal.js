@@ -32,17 +32,46 @@ function Modal () {
 /*Собираем данные для модалки карты */
         var incoming_data = this.globalSettings[a[0]];
         var map_images=[];
+// get min and max values
+        var minBulletSize = 10;
+        var maxBulletSize = 30;
+        var min = Infinity;
+        var max = -Infinity;
+        for ( var j = 0; j < incoming_data.length; j++ ) {
+            var value = incoming_data[j].fact;
+            if ( value < min ) {
+                min = value;
+            }
+            if ( value > max ) {
+                max = value;
+            }
+        }
+// it's better to use circle square to show difference between values, not a radius
+        var maxSquare = maxBulletSize * maxBulletSize * 2 * Math.PI;
+        var minSquare = minBulletSize * minBulletSize * 2 * Math.PI;
 
         for(var i=0;i<incoming_data.length;i++)
         {
+           console.warn("modal_map")
+                var value = incoming_data[i].fact;
+                // calculate size of a bubble
+                var square = ( value - min ) / ( max - min ) * ( maxSquare - minSquare ) + minSquare;
+                if ( square < minSquare ) {
+                    square = minSquare;
+                }
+                var size = Math.sqrt( square / ( Math.PI * 2 ) );
+
             var obj={} 
-            obj.width=incoming_data[i].radius;
-            obj.height=incoming_data[i].radius;
+            obj.width=size;
+            obj.height=size;
             obj.color="rgba(140, 255, 190, 0.5)";
             obj.type="circle";
+            obj.label=incoming_data[i].fact;
             obj.labelPosition="middle";
+            obj.labelRollOverColor="#000000";
+            obj.labelFontSize=13;
             obj.name=incoming_data[i].title;
-            obj.value=1;
+            obj.value=incoming_data[i].fact;
             obj.title=incoming_data[i].text;
             obj.latitude=incoming_data[i].lat;
             obj.longitude=incoming_data[i].long;
@@ -1479,14 +1508,15 @@ var chart = AmCharts.makeChart( "avm_char_2", {
                         "type": "map",
                         "fontFamily": "'Open Sans', sans-serif",
         				"theme": "black",
+                        "zoomDuration": 0.3,
         				"mouseWheelZoomEnabled":true,
                         "zoomControl":
                             {
                             "zoomControlEnabled":false
                             },
         				"tapToActivate":false,
-        				"preventDragOut":true,
-        				"imagesSettings":{"centred":false},
+        				"preventDragOut":false,
+        				//"imagesSettings":{"centred":false},
         				 "dataProvider":
         					{
         					"map": "russiaTB",

@@ -1,10 +1,29 @@
 function Ofi_tile () {
-    this.reDraw = function() {
+    this.reDraw = function(a) {
         try {
-        this.refresh();
-            var globalSettings=this.globalSettings;
-        globals.settings = this.globalSettings;
-        //var expData=JSON.parse("["+this.globalSettings.Settings.expData+"]");
+            console.warn("Ofio_tile");
+            this.refresh();
+            var incoming_data = window.data.pers_fi1;
+            var incoming_data2 = window.data.pers_fi2;
+            var globalSettings = this.globalSettings;
+            var data=[];
+            for(var i=0;i<incoming_data.length;i++){
+                var obj={};
+                obj.name=incoming_data[i].category;
+                obj.open=parseFloat(incoming_data[i].data1)||5;
+                obj.close=parseFloat(incoming_data[i].data2)||5;
+                obj.color=incoming_data[i].color1;
+                obj.balloonValue=incoming_data[i].data3;
+                data.push(obj)}
+            var data2=[];
+            for(var i=0;i<incoming_data2.length;i++){
+                var obj={};
+                obj.name=incoming_data2[i].category;
+                obj.open=parseFloat(incoming_data2[i].data1)||5;
+                obj.close=parseFloat(incoming_data2[i].data2)||5;
+                obj.color=incoming_data2[i].color1;
+                obj.balloonValue=incoming_data2[i].data3;
+                data2.push(obj)}
 
         globals.renderComponent (globalSettings,{
             tag : "div",
@@ -41,9 +60,6 @@ function Ofi_tile () {
            "rotate": true,
            "marginRight": 40,
            "theme": "dark",
-           "export": {
-               "enabled": true
-           },
            "categoryAxis": {
                "gridPosition": "start",
                "axisColor": "#a0aab7",
@@ -87,71 +103,72 @@ function Ofi_tile () {
            "allLabels": [],
            "balloon": {},
            "titles": [],
-            "dataProvider": [
-                           {
-                                           "name": "Факт ЗМ 2017",
-                                           "open": 60,
-                                           "close": 76.8,
-                                           "color": "#dfdfdf",
-                                           "balloonValue": "76.8"
-                           },
-                           {
-                                           "name": "Удорожание ст-ти<br>перс-ла",
-                                           "open": 76.8,
-                                           "close": 78.1,
-                                           "color": "#6EC7F7",
-                                           "balloonValue": "+1.3"
-                           },
-                           {
-                                           "name": "Налоги на з/п",
-                                           "open": 78.1,
-                                           "close": 79.4,
-                                           "color": "#6EC7F7",
-                                           "balloonValue": "+1.3"
-                           },
-                           {
-                                           "name": "Индексация",
-                                           "open": 79.4,
-                                           "close": 81.6,
-                                           "color": "#6EC7F7",
-                                           "balloonValue": "+2.2"
-                           },
-                           {
-                                           "name": "Расходы соц. хар-ра",
-                                           "open": 81.6,
-                                           "close": 82.2,
-                                           "color": "#6EC7F7",
-                                           "balloonValue": "+0.6"
-                           },
-                           {
-                                           "name": "Сокр. рез-ва на отпуск",
-                                           "open": 82.2,
-                                           "close": 81.7,
-                                           "color": "#61db96",
-                                           "balloonValue": "-0.5"
-                           },
-                           {
-                                           "name": "Сокр. среднесп. числ.",
-                                           "open": 81.7,
-                                           "close": 80.3,
-                                           "color": "#61db96",
-                                           "balloonValue": "-1.4"
-                           },
-                           {
-                                           "name": "Календ. и завыш.<br>рез-вы",
-                                           "open": 80.3,
-                                           "close": 84.7,
-                                           "color": "#6EC7F7",
-                                           "balloonValue": "+4.4"
-                           },
-                           {
-                                           "name": "Факт ЗМ 2018",
-                                           "open": 60,
-                                           "close": 84.7,
-                                           "color": "#dfdfdf",
-                                           "balloonValue": "84.7"
-                           }
-            ]
+            "dataProvider": data
+            //     [
+            //                {
+            //                                "name": "Факт ЗМ 2017",
+            //                                "open": 60,
+            //                                "close": 76.8,
+            //                                "color": "#dfdfdf",
+            //                                "balloonValue": "76.8"
+            //                },
+            //                {
+            //                                "name": "Удорожание ст-ти<br>перс-ла",
+            //                                "open": 76.8,
+            //                                "close": 78.1,
+            //                                "color": "#6EC7F7",
+            //                                "balloonValue": "+1.3"
+            //                },
+            //                {
+            //                                "name": "Налоги на з/п",
+            //                                "open": 78.1,
+            //                                "close": 79.4,
+            //                                "color": "#6EC7F7",
+            //                                "balloonValue": "+1.3"
+            //                },
+            //                {
+            //                                "name": "Индексация",
+            //                                "open": 79.4,
+            //                                "close": 81.6,
+            //                                "color": "#6EC7F7",
+            //                                "balloonValue": "+2.2"
+            //                },
+            //                {
+            //                                "name": "Расходы соц. хар-ра",
+            //                                "open": 81.6,
+            //                                "close": 82.2,
+            //                                "color": "#6EC7F7",
+            //                                "balloonValue": "+0.6"
+            //                },
+            //                {
+            //                                "name": "Сокр. рез-ва на отпуск",
+            //                                "open": 82.2,
+            //                                "close": 81.7,
+            //                                "color": "#61db96",
+            //                                "balloonValue": "-0.5"
+            //                },
+            //                {
+            //                                "name": "Сокр. среднесп. числ.",
+            //                                "open": 81.7,
+            //                                "close": 80.3,
+            //                                "color": "#61db96",
+            //                                "balloonValue": "-1.4"
+            //                },
+            //                {
+            //                                "name": "Календ. и завыш.<br>рез-вы",
+            //                                "open": 80.3,
+            //                                "close": 84.7,
+            //                                "color": "#6EC7F7",
+            //                                "balloonValue": "+4.4"
+            //                },
+            //                {
+            //                                "name": "Факт ЗМ 2018",
+            //                                "open": 60,
+            //                                "close": 84.7,
+            //                                "color": "#dfdfdf",
+            //                                "balloonValue": "84.7"
+            //                }
+            // ]
 }
 );
 
@@ -162,11 +179,8 @@ var chart = AmCharts.makeChart( "ofi_chart2",{
            "columnWidth": 0.6,
            "color":"#a1abb8",
            "rotate": true,
-           "marginRight": 40,
+           "marginRight": 20,
            "theme": "dark",
-           "export": {
-               "enabled": true
-           },
            "categoryAxis": {
                "gridPosition": "start",
                "axisColor": "#a0aab7",
@@ -210,50 +224,51 @@ var chart = AmCharts.makeChart( "ofi_chart2",{
            "allLabels": [],
            "balloon": {},
            "titles": [],
-    "dataProvider": [
-                   {
-                                   "name": "Факт ЗМ 2017",
-                                   "open": 60,
-                                   "close": 76.8,
-                                   "color": "#dfdfdf",
-                                   "balloonValue": "76.8"
-                   },
-                   {
-                                   "name": "ЦА",
-                                   "open": 76.8,
-                                   "close": 78.1,
-                                   "color": "#6EC7F7",
-                                   "balloonValue": "+1.3"
-                   },
-                   {
-                                   "name": "ПЦП",
-                                   "open": 78.1,
-                                   "close": 79.4,
-                                   "color": "#6EC7F7",
-                                   "balloonValue": "+1.3"
-                   },
-                   {
-                                   "name": "ТБ",
-                                   "open": 79.4,
-                                   "close": 81.6,
-                                   "color": "#6EC7F7",
-                                   "balloonValue": "+2.2"
-                   },
-                   {
-                                   "name": "ВСП",
-                                   "open": 81.6,
-                                   "close": 82.2,
-                                   "color": "#6EC7F7",
-                                   "balloonValue": "+0.6"
-                   },
-                   {
-                                   "name": "Факт ЗМ 2018",
-                                   "open": 60,
-                                   "close": 84.7,
-                                   "color": "#dfdfdf",
-                                   "balloonValue": "84.7"
-                   }
-    ]
+    "dataProvider":data2
+    //     [
+    //                {
+    //                                "name": "Факт ЗМ 2017",
+    //                                "open": 60,
+    //                                "close": 76.8,
+    //                                "color": "#dfdfdf",
+    //                                "balloonValue": "76.8"
+    //                },
+    //                {
+    //                                "name": "ЦА",
+    //                                "open": 76.8,
+    //                                "close": 78.1,
+    //                                "color": "#6EC7F7",
+    //                                "balloonValue": "+1.3"
+    //                },
+    //                {
+    //                                "name": "ПЦП",
+    //                                "open": 78.1,
+    //                                "close": 79.4,
+    //                                "color": "#6EC7F7",
+    //                                "balloonValue": "+1.3"
+    //                },
+    //                {
+    //                                "name": "ТБ",
+    //                                "open": 79.4,
+    //                                "close": 81.6,
+    //                                "color": "#6EC7F7",
+    //                                "balloonValue": "+2.2"
+    //                },
+    //                {
+    //                                "name": "ВСП",
+    //                                "open": 81.6,
+    //                                "close": 82.2,
+    //                                "color": "#6EC7F7",
+    //                                "balloonValue": "+0.6"
+    //                },
+    //                {
+    //                                "name": "Факт ЗМ 2018",
+    //                                "open": 60,
+    //                                "close": 84.7,
+    //                                "color": "#dfdfdf",
+    //                                "balloonValue": "84.7"
+    //                }
+    // ]
 }
 );
 

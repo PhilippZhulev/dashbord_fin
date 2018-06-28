@@ -1,54 +1,58 @@
 function Cir_map_tile () {
-/*		var counter=0;
-		var that=this;
-        var arr ="cir_map";
-
-		if(!this.globalSettings.Settings.break)
-		{
-		that.callZTLFunction("getCache",
-											function(data)
-											{
-											var a=arr.split('$$_$$');
-											var d= data.split('$$_$$');
-											that.globalSettings.Settings.break=true;
-											for(var i=0;i<d.length;i++)
-											{
-												that.globalSettings[a[i]]=JSON.parse(d[i]);
-											}
-											that.reDraw(a);
-										},arr
-									);
-		}else{
-			this.globalSettings.Settings.break=undefined;
-		}
-	}*/
-
     this.readData = function(a) {
+        console.warn("main_map")
+        var globalSettings = this.globalSettings;
         try{
         this.refresh();
         var incoming_data = window.data.cir_map;//this.globalSettings[a[0]];
-        var globalSettings = this.globalSettings;
-       
-        var screen_data=[];
+        var main_map_images=[];
+// get min and max values
+            var minBulletSize = 5;
+            var maxBulletSize = 20;
+            var min = Infinity;
+            var max = -Infinity;
+            for ( var j = 0; j < incoming_data.length; j++ ) {
+                var value = incoming_data[j].fact;
+                if ( value < min ) {
+                    min = value;
+                }
+                if ( value > max ) {
+                    max = value;
+                }
+            }
+// it's better to use circle square to show difference between values, not a radius
+            var maxSquare = maxBulletSize * maxBulletSize * 2 * Math.PI;
+            var minSquare = minBulletSize * minBulletSize * 2 * Math.PI;
 
-        for(var i=0;i<incoming_data.length;i++)
-        {
-            var obj={} 
-            obj.width=incoming_data[i].radius;
-            obj.height=incoming_data[i].radius;
-            obj.color="rgba(140, 255, 190, 0.5)";
-            obj.type="circle";
-            obj.labelPosition="middle";
-            obj.name=incoming_data[i].title;
-            obj.value=1;
-            obj.title=incoming_data[i].text;
-            obj.latitude=incoming_data[i].lat;
-            obj.longitude=incoming_data[i].long;
-            obj.category=incoming_data[i].category;
-            screen_data.push(obj)
-            
-            
-        }
+            for(var i=0;i<incoming_data.length;i++)
+            {
+
+                var value = incoming_data[i].fact;
+                // calculate size of a bubble
+                var square = ( value - min ) / ( max - min ) * ( maxSquare - minSquare ) + minSquare;
+                if ( square < minSquare ) {
+                    square = minSquare;
+                }
+                var size = Math.sqrt( square / ( Math.PI * 2 ) );
+
+                var obj={}
+                obj.width=size;
+                obj.height=size;
+                obj.color="rgba(140, 255, 190, 0.5)";
+                obj.type="circle";
+                obj.label="";
+                obj.labelPosition="middle";
+                obj.labelRollOverColor="#000000";
+                obj.labelFontSize=13;
+                obj.name=incoming_data[i].title;
+                obj.value=incoming_data[i].fact;
+                obj.title=incoming_data[i].text;
+                obj.latitude=incoming_data[i].lat;
+                obj.longitude=incoming_data[i].long;
+                main_map_images.push(obj)
+
+
+            }
         //var expData=JSON.parse("["+this.globalSettings.Settings.cir_data+"]");
         //console.log(screen_data[0].radius);
  
@@ -61,15 +65,13 @@ function Cir_map_tile () {
 '                                            <div class="row">' +
 '                                                <div class="col-12">' +
 '                                                    <span class="tiles__wrapper__tile_title">'+incoming_data[0].category+'</span>' +
-'                                                    <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir_map_big" data-target="cir_map_big" data-title="Карта OPEX по ТБ">' +
-'                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">' +
-'                                                            <path  d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 16.125v2h-24v-20h2v18h22z"/>' +
-'                                                        </svg>' +
+'                                                    <button type="button" class="btn btn-outline-info btn-open-modal btn-sm cir_map_big" data-target="cir_map_big" data-title="Карта OPEX по ТБ" data-big="true">' +
+'<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M23.553 2.338l-6.6 1.343 1.888 1.88-5.885 5.894-.016 3.1 7.458-7.44 1.834 1.827zM.944 21.603l6.6-1.343-1.887-1.88 5.886-5.893.015-3.1-7.46 7.44L2.267 15z"/></svg>'+
 '                                                    </button>' +
 '                                                </div>' +
 '                                            </div>' +
 '                                        </div>' +
-'                                    <div id="cir_map" style="width: 100%;height: calc(100% - 40px);padding: 0 5px;">' +
+'                                    <div id="cir_map" style="width: 100%;height: calc(100% - 40px);padding: 0 5px;"></div>' +
 '                                    </div>'
         });
 
@@ -183,7 +185,9 @@ function Cir_map_tile () {
                         "zoomControl":
                             {
                             "zoomControlEnabled":false,
-                            "homeButtonEnabled":false
+                            "homeButtonEnabled":false,
+                            "maxZoomLevel":1,
+							"minZoomLevel":1
                             },
         				"tapToActivate":false,
         				"preventDragOut":true,
@@ -193,7 +197,7 @@ function Cir_map_tile () {
         					"map": "russiaTB",
         					"getAreasFromMap": true,
         					"areas": [],
-        					"images":screen_data
+        					"images":main_map_images
 
         					},
         				"areasSettings":{

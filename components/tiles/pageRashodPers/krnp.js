@@ -1,182 +1,164 @@
 function Krnp_tile () {
-    this.reDraw = function() {
+    this.reDraw = function(a) {
+        console.warn("krnp")
         try {
-        this.refresh();
-            var globalSettings=this.globalSettings;
-        globals.settings = this.globalSettings;
-        //var expData=JSON.parse("["+this.globalSettings.Settings.expData+"]");
+            this.refresh();
+            var incoming_data =  window.data.krnp;//this.globalSettings[a[0]];
+            var globalSettings = this.globalSettings;
 
-        globals.krnpTableElms = [
-            {
-                parent: "Персонал",
-                fact_curr: "84.7",
-                fact_prev_abs: "+10%",
-                fact_prev_proc: "+0.3%",
-                children: null
-            },
-            {
-                parent: "Расходы на персонал",
-                fact_curr: "81.7",
-                fact_prev_abs: "+8,7%",
-                fact_prev_proc: "1.7%",
-                children: [
-                    {
-                        name: "Статья 1",
-                        fact_curr: "...",
-                        fact_prev_abs: "...",
-                        fact_prev_proc: "..."
-                    },
-                    {
-                        name: "Статья 2",
-                        fact_curr: "...",
-                        fact_prev_abs: "...",
-                        fact_prev_proc: "..."
-                    }
-                ]
-            },
-			{
-                parent: "Зарплата и премия",
-                fact_curr: "44.8",
-                fact_prev_abs: "+2.7%",
-                fact_prev_proc: "+0.5%",
-                children: null
-            },
-			{
-                parent: "Налоги на зарплату",
-                fact_curr: "18.4",
-                fact_prev_abs: "+7.3%",
-                fact_prev_proc: "+22.1%",
-                children: null
-            },
-			{
-                parent: "Резервы на вознаграждения за год",
-                fact_curr: "8.9",
-                fact_prev_abs: "+23.9%",
-                fact_prev_proc: "-30.5%",
-                children: null
-            },
-			{
-                parent: "Долгосрочные обязательства Risk-takers",
-                fact_curr: "2.0",
-                fact_prev_abs: "н/д",
-                fact_prev_proc: "н/д",
-                children: null
-            },
-			{
-                parent: "Резервы на квартальное премирование",
-                fact_curr: "7.7",
-                fact_prev_abs: "+5.5%",
-                fact_prev_proc: "-3.8%",
-                children: null
-            },
-			{
-                parent: "Расходы социального характера",
-                fact_curr: "3.0",
-                fact_prev_abs: "+81.1%",
-                fact_prev_proc: "-26.8%",
-                children: null
-            },
-            {
-                parent: "Выплаты при увольнении сотрудников",
-                fact_curr: "0.6",
-                fact_prev_abs: "+3.8%",
-                fact_prev_proc: "-38.1%",
-                children: null
-            },
-            {
-                parent: "ДМС",
-                fact_curr: "0.7",
-                fact_prev_abs: "+7.3%",
-                fact_prev_proc: "-17.7%",
-                children: null
-            },
-            {
-                parent: "Единовременные премии",
-                fact_curr: "0.4",
-                fact_prev_abs: "+70.5%",
-                fact_prev_proc: "-77.3%",
-                children: null
-            },
-            {
-                parent: "Материальная помощь",
-                fact_curr: "0.5",
-                fact_prev_abs: "+189.1%",
-                fact_prev_proc: "+10.1%",
-                children: null
-            },
-            {
-                parent: "Соц. программа пенсионерам",
-                fact_curr: "0.8",
-                fact_prev_abs: "н/д",
-                fact_prev_proc: "+294.9%",
-                children: null
+            var param= this.globalSettings.Settings.param.split("!!!");
+
+            var y=parseInt(param[1].slice(-2));
+
+            if((param[1]=='12018')&&(param[0]=='Факт')){
+                var cy=param[0]+"\'"+y;//Факт 18
+                var ny=param[0]+"\'"+(y-1);//Факт 17
+
             }
-        ];
+            if((param[1]=='12018')&&(param[0]=='План')){
+                var cy="Факт"+"\'"+y;//Факт 18
+                var ny=param[0]+"\'"+y;//План 18
+            }
+            if((param[1]=='42018')&&(param[0]=='Факт')){
+                var cy="Прогноз";//Прогноз
+                var ny="Факт \'"+(y-1);//Факт 17
+            }
+            if((param[1]=='42018')&&(param[0]=='План')){
+                var cy="Прогноз";//Прогноз
+                var ny="План \'"+y;//План 18
+            }
 
-        //создать пункты
-        function collapseElements(Arr) {
 
-            var element = "",
-                childrenFunc = "",
-                notChild = "",
-                notBefore = "";
+            var screen_data=[];
 
-            function childs (childArr) {
-                var child = "";
-                for(var ic = 0; ic < childArr.length; ic++) {
-                    child +=
-                        '<div class="row">' +
-                        '   <div class="col-6">' +
-                        '       <span class="collapse__table__title">'+ childArr[ic].name +'</span>' +
-                        '   </div>' +
-                        '   <div class="col-2">' +
-                        '       <span class="collapse__table__title">'+ childArr[ic].fact_curr +'</span>' +
-                        '   </div>' +
-                        '   <div class="col-2">' +
-                        '       <span class="collapse__table__title">'+ childArr[ic].fact_prev_abs +'</span>' +
-                        '   </div>' +
-                        '   <div class="col-2">' +
-                        '       <span class="collapse__table__title">'+ childArr[ic].fact_prev_proc +'</span>' +
-                        '   </div>' +
+            for(var i=0;i<incoming_data.length;i++)
+            {
+                var obj={};
+                obj.tile=incoming_data[i].tile;
+                obj.block=incoming_data[i].block;
+                obj.category=incoming_data[i].category;
+                obj.data1=incoming_data[i].data1;
+                obj.data2=incoming_data[i].data2;
+                obj.data3=incoming_data[i].data3;
+                obj.isParent=incoming_data[i].isParent;
+                obj.addClass=incoming_data[i].addClass;
+                screen_data.push(obj)
+            }
+            //var expData=JSON.parse("["+this.globalSettings.Settings.cir_data+"]");
+            //console.log(this.globalSettings.Settings);
+            var table_tmp = [];
+            var child_tmp = [];
+            var parent_prev = {};
+            var parent_assigned = false;
+            for (i=0;i<screen_data.length;i++){
+                var obj={};
+                //console.log("Here, boi "+i);
+                if(screen_data[i].isParent=="parent"){
+                    //console.log("New parent: "+screen_data[i].category+", now exist "+child_tmp.length+" children");
+                    if(parent_assigned){
+                        parent_prev.children=JSON.parse(JSON.stringify(child_tmp));
+                        child_tmp=[];
+                        table_tmp.push(JSON.parse(JSON.stringify(parent_prev)));
+                        parent_prev = {};
+                    }
+                    obj.parent=screen_data[i].category;
+                    obj.data1=screen_data[i].data1;
+                    obj.data2=screen_data[i].data2;
+                    obj.data3=screen_data[i].data3;
+                    obj.addClass=screen_data[i].addClass;
+                    parent_prev = JSON.parse(JSON.stringify(obj));
+                    parent_assigned = true;
+                }else{
+                    obj.name=screen_data[i].category;
+                    obj.data1=screen_data[i].data1;
+                    obj.data2=screen_data[i].data2;
+                    obj.data3=screen_data[i].data3;
+                    if(screen_data[i].addClass!=""){
+                        obj.addclass=screen_data[i].addClass;
+                        obj.link=true;
+                    }
+                    child_tmp.push(JSON.parse(JSON.stringify(obj)));
+                }
+            }
+            parent_prev.children=JSON.parse(JSON.stringify(child_tmp));
+            child_tmp=[];
+            table_tmp.push(JSON.parse(JSON.stringify(parent_prev)));
+            parent_prev = {};
+            globals.krnpTableElms = JSON.parse(JSON.stringify(table_tmp));
+
+
+            //создать пункты
+            function collapseElements(Arr) {
+
+                var element = "";
+
+                function childs (childArr) {
+                    var child = "",
+                        className,
+                        classLink;
+                    for(var ic = 0; ic < childArr.length; ic++) {
+                        if(childArr[ic].addclass !== undefined) {
+                            className = " " + childArr[ic].addclass;
+                        }else {
+                            className = "";
+                        }
+
+                        if(childArr[ic].link === true) {
+                            classLink = " " + "this_link";
+                        }else {
+                            classLink = "";
+                        }
+
+                        child +=
+                            '<div class="row'+ className +'">' +
+                            '   <div class="col-6">' +
+                            '       <span class="collapse__table__title' + classLink + '">'+ childArr[ic].name +'</span>' +
+                            '   </div>' +
+                            '   <div class="col-2">' +
+                            '       <span class="collapse__table__title">'+ childArr[ic].data1 +'</span>' +
+                            '   </div>' +
+                            '   <div class="col-2">' +
+                            '       <span class="collapse__table__title">'+ childArr[ic].data2 +'</span>' +
+                            '   </div>' +
+                            '   <div class="col-2">' +
+                            '       <span class="collapse__table__title">'+ childArr[ic].data3 +'</span>' +
+                            '   </div>' +
+                            '</div>';
+                    }
+                    return child;
+                }
+
+                for(var inc = 0; inc < Arr.length; inc++) {
+                    tmp = "";
+                    if(Arr[inc].addClass!=""){
+                        tmp=" this_link";
+                    }
+                    element +=
+                        '<div class="collapse_title kro_collapse_t">' +
+                        '      <div class="row '+Arr[inc].addClass+'">' +
+                        '           <div class="col-6">' +
+                        '               <span class="collapse__table__title'+tmp+'">'+ Arr[inc].parent +'</span>' +
+                        '           </div>' +
+                        '           <div class="col-2">' +
+                        '               <span class="collapse__table__title">'+ Arr[inc].data1 +'</span>' +
+                        '           </div>' +
+                        '           <div class="col-2">' +
+                        '               <span class="collapse__table__title">'+ Arr[inc].data2 +'</span>' +
+                        '           </div>' +
+                        '           <div class="col-2">' +
+                        '               <span class="collapse__table__title">'+ Arr[inc].data3 +'</span>' +
+                        '           </div>' +
+                        '       </div>' +
+                        '</div>' +
+                        '<div class="collapse_container">' +
+                        childs (Arr[inc].children) +
                         '</div>';
                 }
-                return child;
+                return element;
             }
 
-            for(var inc = 0; inc < Arr.length; inc++) {
-                if(Arr[inc].children === null) {
-                    childrenFunc = "";
-                    notChild = " hidden";
-                    notBefore = " nobefore";
-                }else {
-                    childrenFunc = childs (Arr[inc].children);
-                }
-                element +=
-                    '<div class="collapse_title'+ notBefore +'">' +
-                    '      <div class="row">' +
-                    '           <div class="col-6">' +
-                    '               <span class="collapse__table__title">'+ Arr[inc].parent +'</span>' +
-                    '           </div>' +
-                    '           <div class="col-2">' +
-                    '               <span class="collapse__table__title">'+ Arr[inc].fact_curr +'</span>' +
-                    '           </div>' +
-                    '           <div class="col-2">' +
-                    '               <span class="collapse__table__title">'+ Arr[inc].fact_prev_abs +'</span>' +
-                    '           </div>' +
-                    '           <div class="col-2">' +
-                    '               <span class="collapse__table__title">'+ Arr[inc].fact_prev_proc +'</span>' +
-                    '           </div>' +
-                    '       </div>' +
-                    '</div>' +
-                    '<div class="collapse_container'+ notChild +'">' +
-                        childrenFunc +
-                    '</div>';
-            }
-            return element;
-        }
 
-
-        globals.renderComponent (globalSettings,{
+            globals.renderComponent (globalSettings,{
             tag : "div",
             className : ["tiles__wrapper__item", "item_2", "ind_table"],
             html:
@@ -194,13 +176,13 @@ function Krnp_tile () {
             '                                                <div class="col-6">' +
             '                                                </div>' +
             '                                                <div class="col-2">' +
-            '                                                    <span class="collapse__table__title">Факт \'18</span>' +
+            '                                                    <span class="collapse__table__title">'+cy+'</span>' +
             '                                                </div>' +
             '                                                <div class="col-2">' +
-            '                                                    <span class="collapse__table__title">Факт \'17</span>' +
+            '                                                    <span class="collapse__table__title">'+ny+'</span>' +
             '                                                </div>' +
             '                                                <div class="col-2">' +
-            '                                                    <span class="collapse__table__title">План \'18</span>' +
+            '                                                    <span class="collapse__table__title">Откл-е</span>' +
             '                                                </div>' +
             '                                            <div class="border_bt_table_1"></div>' +
             '                                            </div>' +

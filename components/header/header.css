@@ -1,3 +1,35 @@
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 44, 51, 0.94);
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+}
+.preloader:not(.hidden).active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9999;
+}
+.preloader__inner {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: url(preloader1.gif) center no-repeat;
+    background-size: 90%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(0);
+    transition: all 200ms ease-in-out;
+}
+.preloader.active .preloader__inner {
+    transform: scale(1);
+}
 header.header {
   width: 100%;
   height: 64px;
@@ -91,15 +123,18 @@ b.pages_title {
 .tiles__wrapper__tile  {
   overflow: hidden;
 }
+.back_lanch_btn,
 .back_btn {
     height: 100%;
     width: 50px;
     padding: 11px 2px;
     display: none;
 }
+.back_lanch_btn,
 .back_btn path {
     transition: all 200ms ease-in-out;
 }
+.back_lanch_btn.active,
 .back_btn.active {
     display: block;
 }
@@ -136,8 +171,8 @@ span.bank_group {
     position: absolute;
     right: 50px;
     height: 26px;
-    border: 1px solid #6d7b87;
-    color: #fff;
+    /*border: 1px solid #6D7B87;*/
+    color: #6D7B87;
     font-size: 14px;
     border-radius: 4px;
     width: 86px;

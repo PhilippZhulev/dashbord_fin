@@ -66,7 +66,7 @@ function Opex_tile () {
 '                                            <div class="container">' +
 '                                                <div class="row">' +
 '                                                    <div class="col-12">' +
-'                                                        <span class="tiles__wrapper__tile_title">'+screen_data[0].tile+'</span><strong class="tiles__wrapper__tile_values">'+screen_data[0].fact+'<br><span>'+screen_data[0].mera+'</span></strong>' +
+'                                                        <span class="tiles__wrapper__tile_title">'+screen_data[0].tile+'</span><div class="touch_hint"></div><strong class="tiles__wrapper__tile_values">'+screen_data[0].fact+'<br><span>'+screen_data[0].mera+'</span></strong>' +
 '                                                    </div>' +
 '                                                </div>' +
 '                                            </div>' +
@@ -83,7 +83,7 @@ function Opex_tile () {
 '                                            <span class="legend__item"><i style="background: #6EC7F7"></i>ЦБ</span>' +
 '                                            <span class="legend__item"><i style="background: #2ACED0"></i>Прочее</span>' +
 '                                        </div>' +
-'                                                    <button type="button" class="btn btn-outline-info btn-open-modal btn-sm opex_modal_btn_wow" data-target="opex_m" data-title="Изменение OPEX по Группе 3М17 vs 3М18">' +
+'                                                    <button type="button" class="btn btn-outline-info btn-open-modal btn-sm opex_modal_btn_wow" data-target="opex_m" data-title="Изменение OPEX по Группе 3М17 vs 3М18" data-middle="true">' +
 '                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">' +
 '                                                            <path  d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 16.125v2h-24v-20h2v18h22z"/>' +
 '                                                        </svg>' +

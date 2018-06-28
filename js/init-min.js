@@ -26,6 +26,8 @@ function ReplaceWith(Ele) {
     }
 }
 
+
+
 // prevent all scroll //
 $('body').on('touchmove', function(e) {
     e.preventDefault();
@@ -33,6 +35,19 @@ $('body').on('touchmove', function(e) {
 
 // apply iscroll to scrolling element
 // requires use of id
+
+var countdown = null;
+
+$(document).ajaxStart(function() {
+    $(".preloader").addClass("active");
+    clearTimeout(countdown);
+});
+$(document).ajaxSend(function() {
+    countdown = setTimeout(function () {
+        $(".preloader").removeClass("active");
+        $(".preloader").addClass("hidden")
+    }, 2000);
+});
 
 //чистим link c sab css
 var link = document.querySelectorAll('link[data-sap-ui-ready="true"]');
@@ -208,6 +223,18 @@ globals.ModalWindow = function(options) {
                     scroll_ico.classList.remove("active");
                 }
 
+                if(this.getAttribute("data-big") === "true") {
+                    el.classList.add("big");
+                }else {
+                    el.classList.remove("big");
+                }
+
+                if(this.getAttribute("data-middle") === "true") {
+                    el.classList.add("middle");
+                }else {
+                    el.classList.remove("middle");
+                }
+
                 now = attr;
                 document.querySelector(".modal_title").innerHTML = attrTitle;
                 document.getElementById(attr).classList.add("active");
@@ -221,7 +248,7 @@ globals.ModalWindow = function(options) {
         });
 
         var div = $(".modal_inner");
-        $(document).on("touchstart", function (e){
+        $(document).on("touchstart click", function (e){
             e.preventDefault();
             if (!div.is(e.target) && div.has(e.target).length === 0) {
                 if($("." + options.modal).hasClass("active")) {

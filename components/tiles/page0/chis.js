@@ -65,7 +65,7 @@ function Chis_tile () {
 '                                        <div class="container">' +
 '                                            <div class="row">' +
 '                                                <div class="col-12">' +
-'                                                   <span class="tiles__wrapper__tile_title">'+screen_data[0].tile+'</span><strong class="tiles__wrapper__tile_values">'+screen_data[0].fact+'<br><span>'+screen_data[0].mera+'</span></strong>' +
+'                                                   <span class="tiles__wrapper__tile_title">'+screen_data[0].tile+'</span><div class="touch_hint"></div><strong class="tiles__wrapper__tile_values">'+screen_data[0].fact+'<br><span>'+screen_data[0].mera+'</span></strong>' +
 '                                                </div>' +
 '                                            </div>' +
 '                                        </div>' +

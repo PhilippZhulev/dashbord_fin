@@ -113,3 +113,22 @@ div#wrapper_1_vap {
 div#ar_scroll_wrap {
     height: 520px;
 }
+.big .modal_inner {
+    width: 100%;
+    position: absolute;
+    max-width: 100%;
+    height: 100%;
+    margin-top: 0;
+}
+.middle .modal_inner {
+    width: 100%;
+    max-width: 900px;
+    height: 600px;
+    margin-top: 10%;
+}
+.middle .modal_block {
+    background-size: 76%!important;
+}
+.middle .modal_block#opex_m {
+    background-size: 65%!important;
+}

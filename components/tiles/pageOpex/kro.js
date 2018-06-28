@@ -25,6 +25,7 @@ function Kro_tile () {
     // }
 
     this.reDraw = function(a) {
+        // noinspection JSAnnotator
         try {
         this.refresh();
         var incoming_data =  window.data.kro;//this.globalSettings[a[0]];
@@ -315,15 +316,18 @@ function Kro_tile () {
                 globalSettings.that_c.firePropertiesChangedAndEvent(["SettingsTP"], "tech1");
             }
         });
-
-        globals.navigation({
-            btn : ".prop_click",
-            page : ".p_prop",
-            callback: function () {
-                globalSettings.Settings.result = ".p_prop";
-                globalSettings.that_c.firePropertiesChangedAndEvent(["SettingsTP"], "tech1");
-            }
-        });
+        try {
+            globals.navigation({
+                btn: ".prop_click",
+                page: ".p_prop",
+                callback: function () {
+                    globalSettings.Settings.result = ".p_prop";
+                    globalSettings.that_c.firePropertiesChangedAndEvent(["SettingsTP"], "tech1");
+                }
+            });
+        }catch (e) {
+            
+        }
 
         globals.navigation({
             btn : ".allokaciya_click",

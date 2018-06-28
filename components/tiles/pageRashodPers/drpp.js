@@ -1,10 +1,17 @@
 function Drpp_tile () {
-    this.reDraw = function() {
+    this.reDraw = function(a) {
         try {
-        this.refresh();
-            var globalSettings=this.globalSettings;
-        globals.settings = this.globalSettings;
-        //var expData=JSON.parse("["+this.globalSettings.Settings.expData+"]");
+            console.warn("drnp");
+            this.refresh();
+            var incoming_data = window.data.drnp;//this.globalSettings[a[0]];
+            var globalSettings = this.globalSettings;
+            var data=[];
+            for(var i=0;i<incoming_data.length;i++){
+                var obj={};
+                obj.category=incoming_data[i].category;
+                obj.column1=incoming_data[i].data1;
+                obj.line2=incoming_data[i].data2;
+                data.push(obj)}
 
         globals.renderComponent (globalSettings,{
             tag : "div",
@@ -58,7 +65,7 @@ function Drpp_tile () {
                 "color": "#A0AAB7",
                 "lineThickness": 2,
                 "title": "graph 2",
-                "valueField": "line-2"
+                "valueField": "line2"
                 }
             ],
             "guides": [],
@@ -74,33 +81,34 @@ function Drpp_tile () {
             "allLabels": [],
             "balloon": {},
             "titles": [],
-                        "dataProvider": [
-                               {
-                               "category": "2016",
-                               "column-1": "н/д",
-                               "line-2": "н/д"
-                               },
-                               {
-                               "category": "2017",
-                               "column-1": "324",
-                               "line-2": "326"
-                               },
-                               {
-                               "category": "2018",
-                               "column-1": "85",
-                               "line-2": "328"
-                               },
-                               {
-                               "category": "2019",
-                               "column-1": "н/д",
-                               "line-2": "н/д"
-                               },
-                               {
-                               "category": "2020",
-                               "column-1": "н/д",
-                               "line-2": "н/д"
-                          }
-                        ]
+            "dataProvider": data
+                        //     [
+                        //        {
+                        //        "category": "2016",
+                        //        "column-1": "н/д",
+                        //        "line-2": "н/д"
+                        //        },
+                        //        {
+                        //        "category": "2017",
+                        //        "column-1": "324",
+                        //        "line-2": "326"
+                        //        },
+                        //        {
+                        //        "category": "2018",
+                        //        "column-1": "85",
+                        //        "line-2": "328"
+                        //        },
+                        //        {
+                        //        "category": "2019",
+                        //        "column-1": "н/д",
+                        //        "line-2": "н/д"
+                        //        },
+                        //        {
+                        //        "category": "2020",
+                        //        "column-1": "н/д",
+                        //        "line-2": "н/д"
+                        //   }
+                        // ]
         });
 
         var chart = AmCharts.makeChart( "drpp_chart_g_2", {
@@ -134,7 +142,7 @@ function Drpp_tile () {
                 "labelText": "[[value]]",
                 "title": "graph 1",
                 "type": "column",
-                "valueField": "column-1"
+                "valueField": "column1"
                 }
             ],
             "guides": [],
@@ -150,33 +158,34 @@ function Drpp_tile () {
             "allLabels": [],
             "balloon": {},
             "titles": [],
-            "dataProvider": [
-                               {
-                               "category": "2016",
-                               "column-1": "н/д",
-                               "line-2": "н/д"
-                               },
-                               {
-                               "category": "2017",
-                               "column-1": "324",
-                               "line-2": "326"
-                               },
-                               {
-                               "category": "2018",
-                               "column-1": "85",
-                               "line-2": "328"
-                               },
-                               {
-                               "category": "2019",
-                               "column-1": "н/д",
-                               "line-2": "н/д"
-                               },
-                               {
-                               "category": "2020",
-                               "column-1": "н/д",
-                               "line-2": "н/д"
-                          }
-                        ]
+            "dataProvider": data
+                // [
+                //                {
+                //                "category": "2016",
+                //                "column-1": "н/д",
+                //                "line-2": "н/д"
+                //                },
+                //                {
+                //                "category": "2017",
+                //                "column-1": "324",
+                //                "line-2": "326"
+                //                },
+                //                {
+                //                "category": "2018",
+                //                "column-1": "85",
+                //                "line-2": "328"
+                //                },
+                //                {
+                //                "category": "2019",
+                //                "column-1": "н/д",
+                //                "line-2": "н/д"
+                //                },
+                //                {
+                //                "category": "2020",
+                //                "column-1": "н/д",
+                //                "line-2": "н/д"
+                //           }
+                //         ]
 }); 
 }
 catch(e){

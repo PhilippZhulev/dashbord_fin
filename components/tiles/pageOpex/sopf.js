@@ -59,7 +59,7 @@ function Sopf_tile () {
             '       <div class="container">' +
             '          <div class="row">' +
             '              <div class="col-12">' +
-            '                   <span class="tiles__wrapper__tile_title click_btn_sopf">Структура OPEX по функциям/блокам<span>млрд. руб</span></span>' +
+            '                   <span class="tiles__wrapper__tile_title click_btn_sopf">Структура OPEX по функциям/блокам<span>млрд. руб</span><div class="touch_hint"></div></span>' +
             '              </div>' +
             '          </div>' +
             '      </div>' +
